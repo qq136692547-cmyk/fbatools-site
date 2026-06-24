@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amazon FBA vs FBM Profit Calculator 2026 | FBATools</title>
+<meta name="description" content="Side-by-side Amazon FBA vs FBM profit calculator. Compare net profit, margin and ROI between FBA and FBM fulfillment for any product." />
+<link rel="canonical" href="https://fbatools.zh.kg/tools/profit-calculator/" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo"><img src="/assets/images/logo.svg" alt="FBATools" width="32" height="32" /><span>FBATools</span></a>
+    <nav class="main-nav">
+      <a href="/tools/fba-calculator/">FBA Calculator</a>
+      <a href="/tools/profit-calculator/">Profit</a>
+      <a href="/tools/fba-vs-fbm/">FBA vs FBM</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container calc-page">
+  <h1>FBA vs FBM Profit Calculator</h1>
+  <p class="subtitle">Quickly see whether FBA or FBM is more profitable for your product in 2026.</p>
+
+  <div class="calc-layout">
+    <section class="calc-card">
+      <h2>Product economics</h2>
+      <div class="form-row"><label>Sale price (USD)</label><input type="number" id="sale" value="29.99" step="0.01" /></div>
+      <div class="form-row"><label>Amazon category</label>
+        <select id="cat">
+          <option value="0.15">Most categories (15%)</option>
+          <option value="0.08">Consumer Electronics (8%)</option>
+          <option value="0.45">Amazon Device Accessories (45%, capped at $0.30)</option>
+        </select>
+      </div>
+      <div class="form-row"><label>Product cost (COGS)</label><input type="number" id="cogs" value="6.50" step="0.01" /></div>
+      <div class="form-row"><label>Inbound shipping to Amazon</label><input type="number" id="inbound" value="1.20" step="0.01" /></div>
+      <div class="form-row"><label>FBM outbound shipping per order</label><input type="number" id="shipOut" value="4.50" step="0.01" /></div>
+      <div class="form-row"><label>Amazon Ads % of sale</label><input type="number" id="ads" value="15" step="1" min="0" max="100" /></div>
+      <div class="form-row"><label>FBA monthly storage per unit</label><input type="number" id="storage" value="0.30" step="0.01" /></div>
+    </section>
+
+    <section class="calc-card">
+      <h2>Comparison</h2>
+      <div class="result-row"><span class="label">FBA net profit per unit</span><span class="value" id="r_fba_profit">$0.00</span></div>
+      <div class="result-row"><span class="label">FBM net profit per unit</span><span class="value" id="r_fbm_profit">$0.00</span></div>
+      <div class="result-row"><span class="label">FBA margin</span><span class="value" id="r_fba_margin">0%</span></div>
+      <div class="result-row"><span class="label">FBM margin</span><span class="value" id="r_fbm_margin">0%</span></div>
+      <div class="result-row"><span class="label">FBA ROI</span><span class="value" id="r_fba_roi">0%</span></div>
+      <div class="result-row"><span class="label">FBM ROI</span><span class="value" id="r_fbm_roi">0%</span></div>
+      <div class="result-row highlight"><span class="label">Winner</span><span class="value" id="r_better">—</span></div>
+    </section>
+  </div>
+
+  <section style="margin-top:48px;">
+    <h2>When does FBA beat FBM (and vice versa)?</h2>
+    <p><strong>FBA wins when:</strong> your product is small/light, turns fast, and Prime shipping drives a Buy Box win rate boost that outweighs the $3-6 FBA fee. Typical for items under 1 lb and under $40.</p>
+    <p><strong>FBM wins when:</strong> your product is large/fragile/oversized, has long shelf life, or your self-fulfilled shipping is under $4. Also useful for testing a new SKU without locking up inventory fees.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 FBATools. Independent tool — not affiliated with Amazon.com.</p>
+    <nav><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav>
+  </div>
+</footer>
+
+<script src="/assets/js/profit-calculator.js"></script>
+</body>
+</html>

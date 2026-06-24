@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amazon FBA Calculator 2026 — Free FBA Fee & Profit Calculator | FBATools</title>
+<meta name="description" content="Free Amazon FBA calculator for 2026. Calculate FBA fulfillment fees, referral fees, inbound placement fees, low-inventory fees, storage fees and true net profit in seconds." />
+<meta name="keywords" content="amazon fba calculator, fba fee calculator, fba profit calculator, amazon fba fees 2026, fba inbound placement fee, fba low inventory fee" />
+<link rel="canonical" href="https://fbatools.zh.kg/tools/fba-calculator/" />
+<meta property="og:title" content="Amazon FBA Calculator 2026 — Free FBA Fee & Profit Calculator" />
+<meta property="og:description" content="Calculate FBA fees, profit margins, and ROI instantly. Updated for 2026." />
+<meta property="og:url" content="https://fbatools.zh.kg/tools/fba-calculator/" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Amazon FBA Calculator 2026",
+  "url": "https://fbatools.zh.kg/tools/fba-calculator/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo"><img src="/assets/images/logo.svg" alt="FBATools" width="32" height="32" /><span>FBATools</span></a>
+    <nav class="main-nav">
+      <a href="/tools/fba-calculator/">FBA Calculator</a>
+      <a href="/tools/profit-calculator/">Profit</a>
+      <a href="/tools/fba-vs-fbm/">FBA vs FBM</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container calc-page">
+  <h1>Amazon FBA Calculator</h1>
+  <p class="subtitle">Updated for 2026 fee rules including Inbound Placement Fee and Low-Inventory Fee.</p>
+
+  <div class="calc-layout">
+    <section class="calc-card">
+      <h2>Product & Sale</h2>
+
+      <div class="form-row">
+        <label for="salePrice">Sale price (USD)</label>
+        <input type="number" id="salePrice" value="29.99" step="0.01" min="0" />
+      </div>
+
+      <div class="form-row">
+        <label for="category">Amazon category</label>
+        <select id="category">
+          <option value="0.15">Most categories (15%)</option>
+          <option value="0.08">Consumer Electronics (8%)</option>
+          <option value="0.08">Computers (8%)</option>
+          <option value="0.15">Toys & Games (15%)</option>
+          <option value="0.15">Home & Garden (15%)</option>
+          <option value="0.17">Amazon Device Accessories (45% capped at $0.30)</option>
+          <option value="0.15">Beauty (15%)</option>
+          <option value="0.15">Grocery (15% on portion over $3, 8% on first $3)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="cogs">Product cost (COGS) USD</label>
+        <input type="number" id="cogs" value="6.50" step="0.01" min="0" />
+      </div>
+
+      <div class="form-row">
+        <label for="shippingInbound">Inbound shipping to Amazon (USD/unit)</label>
+        <input type="number" id="shippingInbound" value="1.20" step="0.01" min="0" />
+        <div class="hint">Includes freight, duty, prep, last-mile to FC</div>
+      </div>
+
+      <h2 style="margin-top:24px;">Fulfillment</h2>
+
+      <div class="form-row">
+        <label for="sizeTier">FBA size tier</label>
+        <select id="sizeTier">
+          <option value="small_standard">Small Standard (≤6 oz, ≤10×8×2 in)</option>
+          <option value="large_standard" selected>Large Standard (≤1 lb, ≤18×14×8 in)</option>
+          <option value="large_bulky">Large Bulky (≤50 lb, ≤108×84×42 in)</option>
+          <option value="extra_large">Extra Large (≤150 lb, ≤108×84×42 in)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="weight">Unit weight (lb)</label>
+        <input type="number" id="weight" value="0.75" step="0.01" min="0" />
+      </div>
+
+      <div class="form-row">
+        <label for="storageMonths">Months in Amazon warehouse</label>
+        <input type="number" id="storageMonths" value="1" step="0.1" min="0" />
+      </div>
+
+      <div class="form-row">
+        <label for="isQ4">Q4 (Oct–Dec) storage season</label>
+        <select id="isQ4">
+          <option value="0">No (Jan–Sep)</option>
+          <option value="1" selected>Yes (Oct–Dec, higher rate)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="inventoryLevel">Inventory level</label>
+        <select id="inventoryLevel">
+          <option value="ok">Healthy (Low-Inventory Fee does NOT apply)</option>
+          <option value="low" selected>Low (<28 days of supply) — fee applies</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="placement">Inbound placement program</label>
+        <select id="placement">
+          <option value="minimal">Minimal (Amazon assigns FC) — lower fee</option>
+          <option value="partial" selected>Partial (you pick some FCs)</option>
+          <option value="amazon_partnered">Amazon Partnered Carrier</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="calc-card">
+      <h2>Results</h2>
+      <div class="result-row"><span class="label">Sale price</span><span class="value" id="r_sale">$29.99</span></div>
+      <div class="result-row"><span class="label">− Referral fee</span><span class="value" id="r_referral">−$4.50</span></div>
+      <div class="result-row"><span class="label">− FBA fulfillment fee</span><span class="value" id="r_fulfillment">−$3.86</span></div>
+      <div class="result-row"><span class="label">− Inbound placement fee</span><span class="value" id="r_placement">−$0.21</span></div>
+      <div class="result-row"><span class="label">− Low-inventory fee</span><span class="value" id="r_lowInv">−$0.00</span></div>
+      <div class="result-row"><span class="label">− Storage fee</span><span class="value" id="r_storage">−$0.10</span></div>
+      <div class="result-row"><span class="label">= Amazon proceeds</span><span class="value" id="r_proceeds">$21.32</span></div>
+      <div class="result-row"><span class="label">− COGS</span><span class="value" id="r_cogs">−$6.50</span></div>
+      <div class="result-row"><span class="label">− Inbound shipping</span><span class="value" id="r_ship">−$1.20</span></div>
+      <div class="result-row highlight"><span class="label">Net profit per unit</span><span class="value" id="r_profit">$13.62</span></div>
+      <div class="result-row highlight"><span class="label">Margin / ROI</span><span class="value" id="r_roi">45.4% / 176.9%</span></div>
+
+      <p style="color:var(--text-soft);font-size:.85rem;margin-top:16px;">
+        Estimates based on Amazon's 2026 published US fee schedules. Your actual statement may differ slightly due to aged-inventory surcharges, removals, returns, advertising, and dimensional-weight rounding.
+      </p>
+    </section>
+  </div>
+
+  <section style="margin-top:48px;">
+    <h2>How Amazon's 2026 FBA fees work</h2>
+    <p>Amazon charges sellers five main fees on every FBA sale. Together they typically take 30%–45% of your sale price — so an accurate calculator is essential before you place an order with a supplier.</p>
+    <ol>
+      <li><strong>Referral fee</strong> — 6%–15% of sale price, depending on category.</li>
+      <li><strong>FBA fulfillment fee</strong> — A flat per-unit fee based on size tier and weight.</li>
+      <li><strong>Inbound placement fee</strong> — Effective April 2024. Charged per unit sent to Amazon based on how you split inventory across fulfillment centers.</li>
+      <li><strong>Low-inventory fee</strong> — Effective April 2024. Charged on standard-size units when historical inventory falls below 28 days of supply relative to recent demand.</li>
+      <li><strong>Monthly storage fee</strong> — Per cubic foot, doubled in Q4 (October–December).</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>Is this calculator accurate for 2026 Amazon FBA fees?</summary>
+      <p>Yes. The fee tables are taken from Amazon's official 2026 US Fee Schedule and updated for the Inbound Placement Fee and Low-Inventory Fee. Real Amazon statements can differ by ±2%.</p>
+    </details>
+    <details>
+      <summary>Does Amazon take 15% referral fee on every category?</summary>
+      <p>No. Most consumer categories are 15%, but Amazon Device Accessories are 45% (capped at $0.30 per unit), Consumer Electronics and Computers are 8%, and Grocery is a tiered 8%/15% split.</p>
+    </details>
+    <details>
+      <summary>What is the Inbound Placement Fee?</summary>
+      <p>Effective April 1 2024. It's a per-unit fee that varies by size tier. It is lowest when Amazon assigns fulfillment centers for you ("Minimal") and highest when you choose to ship to a single Amazon FC yourself.</p>
+    </details>
+    <details>
+      <summary>What is the Low-Inventory Fee?</summary>
+      <p>Effective April 1 2024. Charged per unit sold when your historical days-of-supply is below 28 days, relative to recent demand. It applies only to standard-size units.</p>
+    </details>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 FBATools. Independent tool — not affiliated with Amazon.com.</p>
+    <nav>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/fba-calculator.js"></script>
+</body>
+</html>
