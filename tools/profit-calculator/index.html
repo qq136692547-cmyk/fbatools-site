@@ -6,40 +6,44 @@
 <title>Amazon FBA vs FBM Profit Calculator 2026 | FBATools</title>
 <meta name="description" content="Side-by-side Amazon FBA vs FBM profit calculator. Compare net profit, margin and ROI between FBA and FBM fulfillment for any product." />
 <link rel="canonical" href="https://fbatools.zh.kg/tools/profit-calculator/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" />
 <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo"><img src="/assets/images/logo.svg" alt="FBATools" width="32" height="32" /><span>FBATools</span></a>
+    <a href="/" class="logo"><span class="logo-mark">FT</span><span>FBATools</span></a>
     <nav class="main-nav">
       <a href="/tools/fba-calculator/">FBA Calculator</a>
-      <a href="/tools/profit-calculator/">Profit</a>
+      <a href="/tools/profit-calculator/" class="active">Profit</a>
       <a href="/tools/fba-vs-fbm/">FBA vs FBM</a>
       <a href="/blog/">Blog</a>
     </nav>
   </div>
 </header>
 
-<main class="container calc-page">
+<main class="calc-page container">
+  <span class="eyebrow">2026 fee schedule</span>
   <h1>FBA vs FBM Profit Calculator</h1>
-  <p class="subtitle">Quickly see whether FBA or FBM is more profitable for your product in 2026.</p>
+  <p class="subtitle">Which fulfillment method actually makes you more money in 2026? Side-by-side, real-time.</p>
 
   <div class="calc-layout">
     <section class="calc-card">
-      <h2>Product economics</h2>
+      <h2>Inputs</h2>
       <div class="form-row"><label>Sale price (USD)</label><input type="number" id="sale" value="29.99" step="0.01" /></div>
-      <div class="form-row"><label>Amazon category</label>
+      <div class="form-row"><label>Category</label>
         <select id="cat">
           <option value="0.15">Most categories (15%)</option>
-          <option value="0.08">Consumer Electronics (8%)</option>
-          <option value="0.45">Amazon Device Accessories (45%, capped at $0.30)</option>
+          <option value="0.08">Electronics (8%)</option>
+          <option value="0.17">Clothing (17%)</option>
         </select>
       </div>
       <div class="form-row"><label>Product cost (COGS)</label><input type="number" id="cogs" value="6.50" step="0.01" /></div>
       <div class="form-row"><label>Inbound shipping to Amazon</label><input type="number" id="inbound" value="1.20" step="0.01" /></div>
       <div class="form-row"><label>FBM outbound shipping per order</label><input type="number" id="shipOut" value="4.50" step="0.01" /></div>
-      <div class="form-row"><label>Amazon Ads % of sale</label><input type="number" id="ads" value="15" step="1" min="0" max="100" /></div>
+      <div class="form-row"><label>Amazon Ads (% of sale)</label><input type="number" id="ads" value="15" step="1" min="0" max="100" /></div>
       <div class="form-row"><label>FBA monthly storage per unit</label><input type="number" id="storage" value="0.30" step="0.01" /></div>
     </section>
 
@@ -55,16 +59,22 @@
     </section>
   </div>
 
-  <section style="margin-top:48px;">
-    <h2>When does FBA beat FBM (and vice versa)?</h2>
-    <p><strong>FBA wins when:</strong> your product is small/light, turns fast, and Prime shipping drives a Buy Box win rate boost that outweighs the $3-6 FBA fee. Typical for items under 1 lb and under $40.</p>
-    <p><strong>FBM wins when:</strong> your product is large/fragile/oversized, has long shelf life, or your self-fulfilled shipping is under $4. Also useful for testing a new SKU without locking up inventory fees.</p>
+  <section style="margin-top:var(--s-7);">
+    <div class="section-header">
+      <h2>When FBA wins, when FBM wins</h2>
+      <span class="section-tag">01 / decision guide</span>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="icon">[ FBA ]</div><h3>FBA wins when</h3><p>Your product is small, light, turns fast, and Prime shipping gives you a Buy Box boost that outweighs the $3-6 FBA fee. Typical for items under 1 lb and under $40.</p></div>
+      <div class="feature"><div class="icon">[ FBM ]</div><h3>FBM wins when</h3><p>Your product is large, fragile, has long shelf life, or your self-fulfilled shipping is under $4. Also useful for testing a new SKU without locking up inventory fees.</p></div>
+      <div class="feature"><div class="icon">[ ∞ ]</div><h3>The break-even</h3><p>For a 0.75 lb item in Home & Kitchen, FBM starts to win when your outbound shipping drops below ~$3.50. Below that, FBA's $4.98 + placement + storage + low-inventory fees outweigh Prime's Buy Box benefit.</p></div>
+    </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 FBATools. Independent tool — not affiliated with Amazon.com.</p>
+    <p>© 2026 FBATools. Independent tool — not affiliated with Amazon.com.</p>
     <nav><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav>
   </div>
 </footer>
