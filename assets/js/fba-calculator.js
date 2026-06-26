@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   // 2026 Amazon FBA US fee tables (verified against Amazon official 2026-01-15 announcement,
@@ -56,6 +56,7 @@
   var FUEL_SURCHARGE = 0.035;  // +3.5% on FBA fulfillment, effective Apr 17 2026
   var LOW_PRICE_REFERRAL_ADDON = 0.05;  // +$0.05 for items under $10
   var LOW_PRICE_THRESHOLD = 10;
+  var REF_MIN = 0.30;
 
   var $id = function (s) { return document.getElementById(s); };
   var $num = function (s) { var v = parseFloat(s); return isNaN(v) || v < 0 ? 0 : v; };
@@ -63,9 +64,64 @@
 
   function isOversize(tier) { return tier !== 'small_standard' && tier !== 'large_standard'; }
 
+  // Multi-tier referral fee calculator
+  function calcReferral(category, salePrice) {
+    var sel = $id('category');
+    var opt = sel.options[sel.selectedIndex];
+    var data = {
+      rate: parseFloat(opt.getAttribute('data-rate') || 0),
+      tier: parseFloat(opt.getAttribute('data-tier') || 0),
+      tier1: parseFloat(opt.getAttribute('data-tier1') || 0),
+      tier2: parseFloat(opt.getAttribute('data-tier2') || 0),
+      tier3: parseFloat(opt.getAttribute('data-tier3') || 0),
+      cap: parseFloat(opt.getAttribute('data-cap') || 0),
+      min: parseFloat(opt.getAttribute('data-min') || 0),
+      closing: parseFloat(opt.getAttribute('data-closing') || 0)
+    };
+
+    var ref = 0;
+    if (category === 'most' || category === 'beauty_grocery' || category === 'clothing' || category === 'auto') {
+      // Single tier
+      ref = salePrice * data.rate;
+    } else if (category === 'amazon_device') {
+      // 45% capped $0.30
+      ref = Math.min(salePrice * data.rate, data.cap);
+    } else if (category === 'electronics' || category === 'cell_phones') {
+      // 鈮?100: 8%, >$100: 15%
+      if (salePrice <= 100) ref = salePrice * data.rate;
+      else ref = 100 * data.rate + (salePrice - 100) * data.tier1;
+    } else if (category === 'books') {
+      // 鈮?15: 5%, $15-$20: 10%, >$20: 17% + closing fee $1.80
+      if (salePrice <= 15) ref = salePrice * data.rate;
+      else if (salePrice <= 20) ref = 15 * data.rate + (salePrice - 15) * data.tier1;
+      else ref = 15 * data.rate + 5 * data.tier1 + (salePrice - 20) * data.tier2;
+      ref += data.closing;
+    } else if (category === 'watches') {
+      // 鈮?1500: 16%, >$1500: 3%
+      if (salePrice <= 1500) ref = salePrice * data.rate;
+      else ref = 1500 * data.rate + (salePrice - 1500) * data.tier2;
+    } else if (category === 'jewelry') {
+      // 鈮?100: 20% (min $1), $100-$1K: 15%, $1K-$5K: 10%, >$5K: 5%
+      if (salePrice <= 100) ref = Math.max(salePrice * data.rate, data.min);
+      else if (salePrice <= 1000) ref = 100 * data.rate + (salePrice - 100) * data.tier1;
+      else if (salePrice <= 5000) ref = 100 * data.rate + 900 * data.tier1 + (salePrice - 1000) * data.tier2;
+      else ref = 100 * data.rate + 900 * data.tier1 + 4000 * data.tier2 + (salePrice - 5000) * data.tier3;
+    } else {
+      // fallback: most categories
+      ref = salePrice * 0.15;
+    }
+
+    // Referral minimum $0.30 (not for Amazon Device which has capped logic)
+    if (category !== 'amazon_device') {
+      ref = Math.max(ref, REF_MIN);
+    }
+
+    return ref;
+  }
+
   function calculate() {
     var salePrice = $num($id('salePrice').value);
-    var refRate = $num($id('category').value);
+    var categoryKey = $id('category').value;
     var cogs = $num($id('cogs').value);
     var ship = $num($id('shippingInbound').value);
     var tier = $id('sizeTier').value;
@@ -73,12 +129,11 @@
     var isQ4 = $id('isQ4').value === '1';
     var invLevel = $id('inventoryLevel').value;
     var placement = $id('placement').value;
-    var refMin = 0.30;
 
-    // 1. Referral fee
-    var referral = Math.max(salePrice * refRate, refMin);
+    // 1. Referral fee (multi-tier)
+    var referral = calcReferral(categoryKey, salePrice);
     if (salePrice > 0 && salePrice < LOW_PRICE_THRESHOLD) {
-      referral = Math.max(referral, refMin) + LOW_PRICE_REFERRAL_ADDON;
+      referral = referral + LOW_PRICE_REFERRAL_ADDON;
     }
 
     // 2. FBA fulfillment (with low-price override + fuel surcharge)
@@ -108,16 +163,16 @@
     var roi = totalCost > 0 ? (profit / totalCost) * 100 : 0;
 
     $id('r_sale').textContent = fmt(salePrice);
-    $id('r_referral').textContent = '−' + fmt(referral);
-    $id('r_fulfillment').textContent = '−' + fmt(fulfillment);
-    $id('r_placement').textContent = '−' + fmt(placementFee);
-    $id('r_lowInv').textContent = '−' + fmt(lowInv);
-    $id('r_storage').textContent = '−' + fmt(storage);
+    $id('r_referral').textContent = '鈭? + fmt(referral);
+    $id('r_fulfillment').textContent = '鈭? + fmt(fulfillment);
+    $id('r_placement').textContent = '鈭? + fmt(placementFee);
+    $id('r_lowInv').textContent = '鈭? + fmt(lowInv);
+    $id('r_storage').textContent = '鈭? + fmt(storage);
     $id('r_proceeds').textContent = fmt(proceeds);
-    $id('r_cogs').textContent = '−' + fmt(cogs);
-    $id('r_ship').textContent = '−' + fmt(ship);
+    $id('r_cogs').textContent = '鈭? + fmt(cogs);
+    $id('r_ship').textContent = '鈭? + fmt(ship);
     $id('r_profit').textContent = fmt(profit);
-    $id('r_roi').textContent = margin.toFixed(1) + '% · ' + roi.toFixed(1) + '%';
+    $id('r_roi').textContent = margin.toFixed(1) + '% 路 ' + roi.toFixed(1) + '%';
   }
 
   document.addEventListener('DOMContentLoaded', function () {

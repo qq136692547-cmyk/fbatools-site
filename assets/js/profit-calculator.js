@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   // === 2026 Amazon FBA US fee tables (shared with fba-calculator) ===
@@ -43,9 +43,64 @@
   function num(s) { var v = parseFloat(s); return isNaN(v) || v < 0 ? 0 : v; }
   function fmt(n) { return '$' + n.toFixed(2); }
 
+  // Multi-tier referral fee calculator (must match fba-calculator.js exactly)
+  function calcReferral(category, salePrice) {
+    var sel = get('cat');
+    var opt = sel.options[sel.selectedIndex];
+    var data = {
+      rate: parseFloat(opt.getAttribute('data-rate') || 0),
+      tier: parseFloat(opt.getAttribute('data-tier') || 0),
+      tier1: parseFloat(opt.getAttribute('data-tier1') || 0),
+      tier2: parseFloat(opt.getAttribute('data-tier2') || 0),
+      tier3: parseFloat(opt.getAttribute('data-tier3') || 0),
+      cap: parseFloat(opt.getAttribute('data-cap') || 0),
+      min: parseFloat(opt.getAttribute('data-min') || 0),
+      closing: parseFloat(opt.getAttribute('data-closing') || 0)
+    };
+
+    var ref = 0;
+    if (category === 'most' || category === 'beauty_grocery' || category === 'clothing' || category === 'auto') {
+      // Single tier
+      ref = salePrice * data.rate;
+    } else if (category === 'amazon_device') {
+      // 45% capped $0.30
+      ref = Math.min(salePrice * data.rate, data.cap);
+    } else if (category === 'electronics' || category === 'cell_phones') {
+      // 鈮?100: 8%, >$100: 15%
+      if (salePrice <= 100) ref = salePrice * data.rate;
+      else ref = 100 * data.rate + (salePrice - 100) * data.tier1;
+    } else if (category === 'books') {
+      // 鈮?15: 5%, $15-$20: 10%, >$20: 17% + closing fee $1.80
+      if (salePrice <= 15) ref = salePrice * data.rate;
+      else if (salePrice <= 20) ref = 15 * data.rate + (salePrice - 15) * data.tier1;
+      else ref = 15 * data.rate + 5 * data.tier1 + (salePrice - 20) * data.tier2;
+      ref += data.closing;
+    } else if (category === 'watches') {
+      // 鈮?1500: 16%, >$1500: 3%
+      if (salePrice <= 1500) ref = salePrice * data.rate;
+      else ref = 1500 * data.rate + (salePrice - 1500) * data.tier2;
+    } else if (category === 'jewelry') {
+      // 鈮?100: 20% (min $1), $100-$1K: 15%, $1K-$5K: 10%, >$5K: 5%
+      if (salePrice <= 100) ref = Math.max(salePrice * data.rate, data.min);
+      else if (salePrice <= 1000) ref = 100 * data.rate + (salePrice - 100) * data.tier1;
+      else if (salePrice <= 5000) ref = 100 * data.rate + 900 * data.tier1 + (salePrice - 1000) * data.tier2;
+      else ref = 100 * data.rate + 900 * data.tier1 + 4000 * data.tier2 + (salePrice - 5000) * data.tier3;
+    } else {
+      // fallback: most categories
+      ref = salePrice * 0.15;
+    }
+
+    // Referral minimum $0.30 (not for Amazon Device which has capped logic)
+    if (category !== 'amazon_device') {
+      ref = Math.max(ref, REF_MIN);
+    }
+
+    return ref;
+  }
+
   function calc() {
     var sale     = num(get('sale').value);
-    var cat      = parseFloat(get('cat').value);
+    var catKey   = get('cat').value;
     var cogs     = num(get('cogs').value);
     var inbound  = num(get('inbound').value);
     var shipOut  = num(get('shipOut').value);
@@ -55,13 +110,11 @@
     var placementMode = get('placement').value;
     var invLevel = get('isLowInv').value;
 
-    if (isNaN(cat) || cat <= 0) cat = 0;
-
     // === FBA path: 5 Amazon fees ===
-    // 1. Referral fee
-    var referral = Math.max(sale * cat, REF_MIN);
+    // 1. Referral fee (multi-tier)
+    var referral = calcReferral(catKey, sale);
     if (sale > 0 && sale < LOW_PRICE_THRESHOLD) {
-      referral = Math.max(referral, REF_MIN) + LOW_PRICE_REFERRAL_ADDON;
+      referral = referral + LOW_PRICE_REFERRAL_ADDON;
     }
 
     // 2. FBA fulfillment
@@ -78,9 +131,7 @@
     // 4. Low-inventory fee
     var lowInv = invLevel === 'low' ? LOW_INV[tier] : 0;
 
-    // 5. Storage (constant input — user provides monthly per-unit)
-    // fbaStorage is the user's own storage estimate input
-
+    // 5. Storage
     var fbaFees = referral + fulfillment + placementFee + lowInv + fbaStorage;
     var fbaRevenue = sale - fbaFees;
     var ads = sale * adsPct;
@@ -90,9 +141,9 @@
     var fbaRoi = fbaCostBase > 0 ? (fbaProfit / fbaCostBase) * 100 : 0;
 
     // === FBM path ===
-    var fbmReferral = Math.max(sale * cat, REF_MIN);
+    var fbmReferral = calcReferral(catKey, sale);
     if (sale > 0 && sale < LOW_PRICE_THRESHOLD) {
-      fbmReferral = Math.max(fbmReferral, REF_MIN) + LOW_PRICE_REFERRAL_ADDON;
+      fbmReferral = fbmReferral + LOW_PRICE_REFERRAL_ADDON;
     }
     var fbmRevenue = sale - fbmReferral - shipOut;
     var fbmProfit = fbmRevenue - cogs - inbound - ads;
