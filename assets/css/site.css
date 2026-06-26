@@ -343,10 +343,11 @@ body.home { color: #111114; overflow-x: hidden; }
 .calc-field label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 6px;
 }
 .calc-field .input {
@@ -1232,6 +1233,18 @@ body.home :focus-visible { outline-color: #fff; }
 }
 
 
+/* tool-page H1 (standalone, not inside .tool-header) */
+body.tool-calc .tool-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  margin: 0 0 24px;
+  color: #fff;
+  max-width: 880px;
+}
+
 /* tool-page dark calculator shell */
 body.tool-calc {
   --bg: #0B0B0F;
@@ -1404,10 +1417,11 @@ body.tool-calc .tool-header .subtitle {
 .calc-field label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 6px;
 }
 .calc-field .input,
