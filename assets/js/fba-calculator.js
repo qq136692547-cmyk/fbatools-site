@@ -163,14 +163,14 @@
     var roi = totalCost > 0 ? (profit / totalCost) * 100 : 0;
 
     $id('r_sale').textContent = fmt(salePrice);
-    $id('r_referral').textContent = '鈭? + fmt(referral);
-    $id('r_fulfillment').textContent = '鈭? + fmt(fulfillment);
-    $id('r_placement').textContent = '鈭? + fmt(placementFee);
-    $id('r_lowInv').textContent = '鈭? + fmt(lowInv);
-    $id('r_storage').textContent = '鈭? + fmt(storage);
+    $id('r_referral').textContent = '- + fmt(referral);
+    $id('r_fulfillment').textContent = '- + fmt(fulfillment);
+    $id('r_placement').textContent = '- + fmt(placementFee);
+    $id('r_lowInv').textContent = '- + fmt(lowInv);
+    $id('r_storage').textContent = '- + fmt(storage);
     $id('r_proceeds').textContent = fmt(proceeds);
-    $id('r_cogs').textContent = '鈭? + fmt(cogs);
-    $id('r_ship').textContent = '鈭? + fmt(ship);
+    $id('r_cogs').textContent = '- + fmt(cogs);
+    $id('r_ship').textContent = '- + fmt(ship);
     $id('r_profit').textContent = fmt(profit);
     $id('r_roi').textContent = margin.toFixed(1) + '% 路 ' + roi.toFixed(1) + '%';
   }
