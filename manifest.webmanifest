@@ -1,0 +1,12 @@
+{
+  "name": "FBATools — Amazon FBA Calculator & Seller Tools",
+  "short_name": "fbatools",
+  "description": "Free Amazon FBA calculator and seller tools (2026).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F97316",
+  "theme_color": "#F97316",
+  "icons": [
+    {"src": "/assets/images/favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}
