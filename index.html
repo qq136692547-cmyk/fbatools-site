@@ -19,7 +19,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
 <link rel="stylesheet" href="/assets/css/site.css" />
 <style>
-  /* fbatools brand colors override the home hero */
   body.home {
     --brand-1: #F97316;
     --brand-2: #DB2777;
@@ -70,40 +69,110 @@
       <a href="#how-it-works" class="btn btn-ghost">How it works</a>
     </div>
 
-    <div class="calc-window" aria-label="Sample Amazon FBA fee breakdown">
-      <div class="calc-titlebar">
-        <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="calc-name">FBA Calculator &middot; sample: $29.99 standard-size</div>
-        <div class="calc-badge">Live</div>
+    <div class="calc-window" role="region" aria-label="Amazon FBA calculator demo">
+      <div class="demo-tabs-bar">
+        <div class="demo-traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+        <button class="demo-tab is-active" data-tab="calc">
+          <span>&gt;_</span> fba-calculator <span class="demo-tab-kbd"><span class="kbd">F</span></span>
+        </button>
+        <button class="demo-tab" data-tab="profit">
+          <span>&gt;_</span> fba-vs-fbm <span class="demo-tab-kbd"><span class="kbd">P</span></span>
+        </button>
+        <button class="demo-tab" data-tab="fees">
+          <span>&gt;_</span> fee-breakdown <span class="demo-tab-kbd"><span class="kbd">B</span></span>
+        </button>
+        <span class="demo-pill">LIVE</span>
       </div>
-      <div class="calc-body">
-        <div class="calc-inputs">
-          <div class="calc-field">
-            <label>Sale price</label>
-            <div class="input"><span class="prefix">$</span><span>29.99</span></div>
+
+      <div class="demo-tabpanel is-active" data-panel="calc">
+        <div class="calc-body">
+          <div class="calc-inputs">
+            <div class="calc-field">
+              <label>Sale price</label>
+              <div class="input"><span class="prefix">$</span><span>29.99</span></div>
+            </div>
+            <div class="calc-field">
+              <label>COGS + inbound shipping</label>
+              <div class="input"><span class="prefix">$</span><span>8.20</span></div>
+            </div>
+            <div class="calc-field">
+              <label>Category</label>
+              <div class="input"><span>Home &amp; Kitchen (15%)</span></div>
+            </div>
+            <div class="calc-field">
+              <label>Size tier</label>
+              <div class="input"><span>Standard, &lt; 1 lb</span></div>
+            </div>
           </div>
-          <div class="calc-field">
-            <label>COGS + inbound shipping</label>
-            <div class="input"><span class="prefix">$</span><span>8.20</span></div>
-          </div>
-          <div class="calc-field">
-            <label>Category</label>
-            <div class="input"><span>Home &amp; Kitchen (15%)</span></div>
-          </div>
-          <div class="calc-field">
-            <label>Size tier</label>
-            <div class="input"><span>Standard, &lt; 1 lb</span></div>
+          <div class="calc-results">
+            <div class="calc-result-row"><span class="lbl">Referral fee (15%)</span><span class="val">&minus;$4.50</span></div>
+            <div class="calc-result-row"><span class="lbl">FBA fulfillment</span><span class="val">&minus;$5.40</span></div>
+            <div class="calc-result-row"><span class="lbl">Inbound placement</span><span class="val">&minus;$0.30</span></div>
+            <div class="calc-result-row"><span class="lbl">Low-inventory fee</span><span class="val">&minus;$0.87</span></div>
+            <div class="calc-result-row"><span class="lbl">Storage (monthly)</span><span class="val">&minus;$0.10</span></div>
+            <div class="calc-result-row"><span class="lbl">COGS + ship</span><span class="val">&minus;$8.20</span></div>
+            <div class="calc-result-row highlight"><span class="lbl">Net profit / unit</span><span class="val">$10.62</span></div>
           </div>
         </div>
-        <div class="calc-results">
-          <div class="calc-result-row"><span class="lbl">Referral fee (15%)</span><span class="val">&minus;$4.50</span></div>
-          <div class="calc-result-row"><span class="lbl">FBA fulfillment</span><span class="val">&minus;$5.40</span></div>
-          <div class="calc-result-row"><span class="lbl">Inbound placement</span><span class="val">&minus;$0.30</span></div>
-          <div class="calc-result-row"><span class="lbl">Low-inventory fee</span><span class="val">&minus;$0.87</span></div>
-          <div class="calc-result-row"><span class="lbl">Storage (monthly)</span><span class="val">&minus;$0.10</span></div>
-          <div class="calc-result-row"><span class="lbl">COGS + ship</span><span class="val">&minus;$8.20</span></div>
-          <div class="calc-result-row highlight"><span class="lbl">Net profit / unit</span><span class="val">$10.62</span></div>
+      </div>
+
+      <div class="demo-tabpanel" data-panel="profit" hidden>
+        <div class="calc-body" style="grid-template-columns: 1fr 1fr;">
+          <div style="padding:28px; background: rgba(0,0,0,0.3);">
+            <div class="calc-field" style="margin-bottom:6px"><span style="color:#FF7A45;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em">FBA Model</span></div>
+            <div class="calc-result-row" style="border-color:rgba(255,255,255,0.08)"><span class="lbl">Total fees</span><span class="val">&minus;$11.17</span></div>
+            <div class="calc-result-row"><span class="lbl">Net / unit</span><span class="val">$10.62</span></div>
+            <div class="calc-result-row"><span class="lbl">Margin</span><span class="val">35.4%</span></div>
+            <div class="calc-result-row"><span class="lbl">ROI</span><span class="val">130%</span></div>
+            <div class="calc-result-row"><span class="lbl">Per month (100u)</span><span class="val">$1,062</span></div>
+          </div>
+          <div style="padding:28px; background: rgba(0,0,0,0.2);">
+            <div class="calc-field" style="margin-bottom:6px"><span style="color:#60A5FA;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em">FBM Model (you ship)</span></div>
+            <div class="calc-result-row" style="border-color:rgba(255,255,255,0.08)"><span class="lbl">Referral fee (15%)</span><span class="val">&minus;$4.50</span></div>
+            <div class="calc-result-row"><span class="lbl">Shipping (you)</span><span class="val">&minus;$3.20</span></div>
+            <div class="calc-result-row"><span class="lbl">Net / unit</span><span class="val">$14.09</span></div>
+            <div class="calc-result-row"><span class="lbl">Margin</span><span class="val">47.0%</span></div>
+            <div class="calc-result-row"><span class="lbl">Per month (100u)</span><span class="val">$1,409</span></div>
+          </div>
         </div>
+      </div>
+
+      <div class="demo-tabpanel" data-panel="fees" hidden>
+        <div style="padding: 24px 28px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; color: #fff;">
+<pre style="margin:0;color:#fff;font-family:var(--font-mono);font-size:13px;line-height:1.7"><span class="tok-com">// Amazon FBA fee stack 鈥?2026 US schedule</span>
+<span class="tok-key">product</span>  = <span class="tok-str">"$29.99 standard-size home"</span>
+<span class="tok-key">fees</span> = <span class="tok-pun">{</span>
+  <span class="tok-key">referral</span>:        <span class="tok-fn">referral</span>(<span class="tok-num">0.15</span>, product),     <span class="tok-com"># 15% of total</span>
+  <span class="tok-key">fulfillment</span>:     <span class="tok-fn">fba_fulfillment</span>(size, weight), <span class="tok-com"># by tier</span>
+  <span class="tok-key">placement</span>:       <span class="tok-fn">inbound_placement</span>(fc),       <span class="tok-com"># partial = +fee</span>
+  <span class="tok-key">low_inventory</span>:   <span class="tok-fn">lif</span>(days_of_cover),            <span class="tok-com"># &lt;28 days = +fee</span>
+  <span class="tok-key">storage</span>:         <span class="tok-fn">monthly_storage</span>(cuft, month) <span class="tok-com"># Q4 peak rates</span>
+<span class="tok-pun">}</span>
+
+<span class="tok-com">// total = $11.17 &middot; includes the two fees most calculators miss</span>
+<span class="tok-ok">&#10003; placement + low-inventory included by default</span>
+<span class="tok-ok">&#10003; 2026 verified vs Amazon Seller Central</span>
+<span class="tok-ok">&#10003; runs in your browser, no API call</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="n"><span class="accent">$0</span></span>
+        <span class="l">always free &middot; no signup</span>
+      </div>
+      <div class="hero-stat">
+        <span class="n">5<span class="unit">fees</span></span>
+        <span class="l">the real Amazon stack</span>
+      </div>
+      <div class="hero-stat">
+        <span class="n">0<span class="unit">B</span></span>
+        <span class="l">uploaded &middot; client-side</span>
+      </div>
+      <div class="hero-stat">
+        <span class="n">2026</span>
+        <span class="l">fee schedule &middot; verified weekly</span>
       </div>
     </div>
 
@@ -112,7 +181,7 @@
       <span class="dot-sep"></span>
       <span>Source: Amazon Seller Central 2026 fee schedule</span>
       <span class="dot-sep"></span>
-      <span>35.4% net margin</span>
+      <span>Press <span class="kbd">F</span> for calculator, <span class="kbd">P</span> for FBM comparison</span>
     </p>
   </div>
 </section>
@@ -152,7 +221,7 @@
         </div>
         <span class="num">03 &middot; Private</span>
         <h3>No signup, no tracking, no data stored.</h3>
-        <p>All math runs in your browser. We don&rsquo;t log inputs, don&rsquo;t use analytics that fingerprint you, and don&rsquo;t set tracking cookies. Open the page and start calculating.</p>
+        <p>All math runs in your browser. We don&rsquo;t log inputs, don&rsquo;t use analytics that fingerprint you, and don&rsquo;t set tracking cookies.</p>
       </div>
       <div class="bento-card span-3">
         <span class="card-edge" aria-hidden="true"></span>
@@ -189,9 +258,9 @@
         <p>Same product, two fulfillment models. Side-by-side net profit so you can see if FBA fees outweigh the convenience.</p>
         <span class="arrow">Compare models <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
-      <a class="tool-v3" href="/tools/fba-vs-fbm/" style="--tool-color:#8B5CF6;--tool-tint:rgba(139,92,246,0.1);--tool-edge:linear-gradient(90deg,#8B5CF6,#3B82F6)">
+      <a class="tool-v3" href="/blog/amazon-fba-fees-2026/" style="--tool-color:#8B5CF6;--tool-tint:rgba(139,92,246,0.1);--tool-edge:linear-gradient(90deg,#8B5CF6,#3B82F6)">
         <div class="tool-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20l-3 14H5L2 3zM2 3L1 1M10 11v4M14 11v4"/></svg>
         </div>
         <h3>2026 Fee Guide</h3>
         <p>Read the actual 2026 fee schedule broken down by category, size, and weight. Cross-referenced with third-party trackers.</p>
@@ -210,13 +279,13 @@
       <details>
         <summary>How accurate is this calculator?<span class="sign" aria-hidden="true"></span></summary>
         <div class="answer">
-          <p>Fee tables are sourced from Amazon&rsquo;s 2026 published US schedule (last verified Jan 15, 2026 against Amazon&rsquo;s own announcement, then cross-checked against FeeYield&rsquo;s June 27 update). Actual Amazon invoices can differ by roughly 2% due to dimensional-weight rounding, aged-inventory surcharges, removals, and category-specific overrides. For final pricing decisions, always check your own Amazon statement.</p>
+          <p>Fee tables are sourced from Amazon&rsquo;s 2026 published US schedule (last verified Jan 15, 2026 against Amazon&rsquo;s own announcement, then cross-checked against FeeYield&rsquo;s June 27 update). Actual Amazon invoices can differ by roughly 2% due to dimensional-weight rounding, aged-inventory surcharges, removals, and category-specific overrides.</p>
         </div>
       </details>
       <details>
         <summary>Why is my number different from Amazon&rsquo;s official Revenue Calculator?<span class="sign" aria-hidden="true"></span></summary>
         <div class="answer">
-          <p>Amazon&rsquo;s tool uses a simplified model that doesn&rsquo;t always include the Inbound Placement Fee or Low-Inventory Fee. Those two together can be $0.30&ndash;$0.70 per unit for low-stock standard-size items. Our calculator includes them by default.</p>
+          <p>Amazon&rsquo;s tool uses a simplified model that doesn&rsquo;t always include the Inbound Placement Fee or Low-Inventory Fee. Those two together can be $0.30&ndash;$0.70 per unit for low-stock standard-size items.</p>
         </div>
       </details>
       <details>
@@ -275,5 +344,25 @@
     <span class="links"><a href="/privacy/">Privacy</a><a href="https://github.com/qq136692547-cmyk/fbatools-site">Source</a></span>
   </p>
 </footer>
+<script>
+(function(){
+  // Tab switcher for the hero demo
+  const tabs = document.querySelectorAll('.calc-window .demo-tab');
+  const panels = document.querySelectorAll('.calc-window .demo-tabpanel');
+  function activate(name) {
+    tabs.forEach(t => { t.classList.toggle('is-active', t.dataset.tab === name); });
+    panels.forEach(p => { const a = p.dataset.panel === name; p.classList.toggle('is-active', a); if (a) p.removeAttribute('hidden'); else p.setAttribute('hidden',''); });
+  }
+  tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.tab)));
+  const map = { f:'calc', p:'profit', b:'fees' };
+  document.addEventListener('keydown', e => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    const k = e.key.toLowerCase();
+    if (map[k] && document.querySelector('.calc-window')) { activate(map[k]); e.preventDefault(); }
+  });
+})();
+</script>
 </body>
 </html>

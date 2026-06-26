@@ -785,3 +785,149 @@ body.home .copyright .links a:hover { color: #fff; }
   border-radius: 2px;
 }
 body.home :focus-visible { outline-color: #fff; }
+
+
+/* ============================================================
+   v3 ADDITIVE 鈥?hero stats, kbd, hover tilt, tab demo upgrade
+   Keeps all existing classes intact.
+   ============================================================ */
+
+/* kbd badge */
+.kbd {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 22px; height: 22px; padding: 0 6px;
+  font-family: var(--font-mono);
+  font-size: .72rem; font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* hero stats row */
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 36px;
+  margin: 40px 0 0;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  max-width: 880px; margin-left: auto; margin-right: auto;
+  font-family: var(--font-mono);
+  backdrop-filter: blur(8px);
+}
+.hero-stat { flex: 1; min-width: 120px; }
+.hero-stat .n {
+  font-size: 1.6rem; font-weight: 600; color: #fff;
+  display: block; line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.hero-stat .n .unit { font-size: .8rem; color: rgba(255,255,255,0.55); margin-left: 2px; }
+.hero-stat .l {
+  font-size: .7rem; color: rgba(255,255,255,0.55);
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-top: 6px; display: block;
+}
+.hero-stat .accent { color: var(--brand-1, #F97316); }
+
+/* upgrade calc-window to be a tabbed demo */
+.demo-tabs-bar {
+  display: flex; align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 16px 0 16px;
+  gap: 4px;
+}
+.demo-tabs-bar .demo-traffic {
+  display: flex; gap: 6px;
+  padding: 12px 16px 12px 0;
+  margin-right: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.demo-tabs-bar .demo-traffic span {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: #FF5F57;
+  box-shadow: 18px 0 0 #FEBC2E, 36px 0 0 #28C840;
+}
+.demo-tab {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 16px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color .12s ease, border-color .12s ease;
+}
+.demo-tab:hover { color: rgba(255, 255, 255, 0.9); }
+.demo-tab.is-active {
+  color: #fff;
+  border-bottom-color: var(--brand-1, #F97316);
+}
+.demo-tab .demo-tab-kbd { color: rgba(255, 255, 255, 0.35); margin-left: 4px; font-size: 11px; }
+.demo-tabpanel { display: none; }
+.demo-tabpanel.is-active { display: block; animation: tabfade .25s ease; }
+@keyframes tabfade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.demo-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 8px;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  color: #4ADE80;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-left: auto;
+  padding: 12px 16px;
+}
+.demo-pill::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #4ADE80; box-shadow: 0 0 6px #4ADE80;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+/* code highlighting tokens for the demo */
+.tok-str { color: #FFD1A8; }
+.tok-num { color: #60A5FA; }
+.tok-key { color: #C084FC; }
+.tok-com { color: rgba(255, 255, 255, 0.4); font-style: italic; }
+.tok-bool { color: #F472B6; }
+.tok-pun { color: rgba(255, 255, 255, 0.6); }
+.tok-fn  { color: #FBBF24; }
+.tok-ok  { color: #4ADE80; font-weight: 600; }
+
+/* tool-v3 hover tilt */
+.tool-v3 { transform-style: preserve-3d; }
+.tool-v3:hover { transform: translateY(-4px) rotateX(1.5deg); }
+
+/* calculator result highlight with gradient */
+.calc-result-row.highlight {
+  background: linear-gradient(135deg, var(--brand-1, #F97316), var(--brand-2, #DB2777));
+  color: #fff;
+}
+.calc-result-row.highlight .lbl,
+.calc-result-row.highlight .val { color: #fff; }
+
+/* make bento cards feel more "alive" on hover */
+.bento-card { transform-style: preserve-3d; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.bento-card:hover { transform: translateY(-3px) rotateX(1deg); }
+
+/* big stat counter on hover */
+.bento-card .stat-big {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--brand-1, #F97316);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
