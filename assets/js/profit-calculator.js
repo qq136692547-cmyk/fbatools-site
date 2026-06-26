@@ -167,8 +167,12 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     ['sale','cat','cogs','inbound','shipOut','ads','storage','sizeTier','placement','isLowInv'].forEach(function (id) {
-      var el = get(id); if (el) el.addEventListener('input', calc);
-    });
+          var el = get(id);
+          if (el) {
+            el.addEventListener('input', calc);
+            el.addEventListener('change', calc);
+          }
+        });
     calc();
   });
 })();

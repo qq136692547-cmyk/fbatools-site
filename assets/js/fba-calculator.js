@@ -177,7 +177,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     ['salePrice','category','cogs','shippingInbound','sizeTier','storageMonths','isQ4','inventoryLevel','placement']
-      .forEach(function (id) { var el = $id(id); if (el) el.addEventListener('input', calculate); });
+      .forEach(function (id) { var el = $id(id); if (el) { el.addEventListener('input', calculate); el.addEventListener('change', calculate); } });
     calculate();
   });
 })();
