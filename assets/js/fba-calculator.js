@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   // 2026 Amazon FBA US fee tables (verified against Amazon official 2026-01-15 announcement,
@@ -163,16 +163,16 @@
     var roi = totalCost > 0 ? (profit / totalCost) * 100 : 0;
 
     $id('r_sale').textContent = fmt(salePrice);
-    $id('r_referral').textContent = '- + fmt(referral);
-    $id('r_fulfillment').textContent = '- + fmt(fulfillment);
-    $id('r_placement').textContent = '- + fmt(placementFee);
-    $id('r_lowInv').textContent = '- + fmt(lowInv);
-    $id('r_storage').textContent = '- + fmt(storage);
+    $id('r_referral').textContent = '-' + fmt(referral);
+    $id('r_fulfillment').textContent = '-' + fmt(fulfillment);
+    $id('r_placement').textContent = '-' + fmt(placementFee);
+    $id('r_lowInv').textContent = '-' + fmt(lowInv);
+    $id('r_storage').textContent = '-' + fmt(storage);
     $id('r_proceeds').textContent = fmt(proceeds);
-    $id('r_cogs').textContent = '- + fmt(cogs);
-    $id('r_ship').textContent = '- + fmt(ship);
+    $id('r_cogs').textContent = '-' + fmt(cogs);
+    $id('r_ship').textContent = '-' + fmt(ship);
     $id('r_profit').textContent = fmt(profit);
-    $id('r_roi').textContent = margin.toFixed(1) + '% 路 ' + roi.toFixed(1) + '%';
+    $id('r_roi').textContent = margin.toFixed(1) + '% · ' + roi.toFixed(1) + '%';
   }
 
   document.addEventListener('DOMContentLoaded', function () {
