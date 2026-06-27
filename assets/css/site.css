@@ -1493,3 +1493,169 @@ body.tool-calc .copyright { color: rgba(255, 255, 255, 0.45); }
 @media (max-width: 720px) {
   body.tool-calc main.tool-calc { padding: 72px 0 48px; }
 }
+
+/* ===== Copy results button (deng/fbatools tool pages) ===== */
+.calc-results-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s-2);
+}
+.calc-results-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.copy-results-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .12s ease;
+}
+.copy-results-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--brand-1, #F97316);
+}
+.copy-results-btn:focus-visible {
+  outline: 2px solid var(--brand-1, #F97316);
+  outline-offset: 2px;
+}
+.copy-results-btn.copied {
+  color: #4ADE80;
+  border-color: #4ADE80;
+  background: rgba(74, 222, 128, 0.08);
+}
+
+/* ===== Next step recommendation bar (deng/fbatools tool pages) ===== */
+.nextstep {
+  max-width: 880px;
+  margin: var(--s-6) auto 0;
+}
+.nextstep-head {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--s-3);
+}
+.nextstep-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+}
+.nextstep-card {
+  position: relative;
+  display: block;
+  padding: var(--s-4);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.nextstep-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--brand-1, #F97316);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: #fff;
+}
+.nextstep-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4px;
+  padding-right: 22px;
+  letter-spacing: -0.01em;
+}
+.nextstep-desc {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.45;
+}
+.nextstep-arrow {
+  position: absolute;
+  top: var(--s-4); right: var(--s-4);
+  color: rgba(255, 255, 255, 0.4);
+  transition: color .2s ease, transform .2s ease;
+}
+.nextstep-card:hover .nextstep-arrow { color: var(--brand-1, #F97316); transform: translateX(3px); }
+.nextstep-card:focus-visible { outline: 2px solid var(--brand-1, #F97316); outline-offset: 2px; }
+@media (max-width: 720px) {
+  .nextstep-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Email subscribe (deng/fbatools) ===== */
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subscribe-form input[type=email] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: #fff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.subscribe-form input[type=email]::placeholder { color: rgba(255, 255, 255, 0.4); }
+.subscribe-form input[type=email]:focus {
+  outline: none;
+  border-color: var(--brand-1, #F97316);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+.subscribe-form .btn { flex-shrink: 0; }
+.subscribe-done {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #4ADE80;
+  display: none;
+  margin-top: 16px;
+}
+.subscribe-wrap.done .subscribe-form { display: none; }
+.subscribe-wrap.done .subscribe-done { display: block; }
+
+/* inline subscribe (tool pages, after next-step) */
+.subscribe-inline {
+  max-width: 880px;
+  margin: var(--s-5) auto 0;
+  padding: var(--s-4) var(--s-5);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.subscribe-inline .si-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 10px;
+}
+.subscribe-inline .subscribe-form {
+  margin: 0;
+  max-width: none;
+  justify-content: flex-start;
+}
+.subscribe-inline .subscribe-form input[type=email] { min-width: 180px; }
+.subscribe-inline .subscribe-done { margin-top: 10px; }
