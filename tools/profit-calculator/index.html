@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" translate="no">
 <head>
 <meta charset="utf-8" />
@@ -35,6 +35,27 @@
     "priceCurrency": "USD"
   },
   "description": "Amazon FBA profit calculator with all 2026 fees. See net profit, margin, and ROI per unit after referral, fulfillment, storage, and low-inventory fees."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://fbatools.zh.kg/tools/profit-calculator/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://fbatools.zh.kg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Amazon FBA Profit Calculator 2026",
+      "item": "https://fbatools.zh.kg/tools/profit-calculator/"
+    }
+  ]
 }
 </script>
 </head>
@@ -75,7 +96,7 @@
 
             <div class="calc-field">
               <label for="cat">Category</label>
-              <div class="input"><select id="cat"><option value="most" selected data-rate="0.15">Most categories (15%)</option><option value="electronics" data-rate="0.08" data-tier="0.15">Electronics / Computers (8% 鈮?100, 15% >$100)</option><option value="cell_phones" data-rate="0.08" data-tier="0.15">Cell Phones (8% 鈮?100, 15% >$100)</option><option value="beauty_grocery" data-rate="0.08">Beauty / Grocery (8%)</option><option value="clothing" data-rate="0.17">Clothing / Shoes (17%)</option><option value="books" data-rate="0.05" data-tier1="0.10" data-tier2="0.17" data-closing="1.80">Books / Movies / Music (5% 鈮?15, 10% $15-$20, 17% >$20 + $1.80 closing)</option><option value="watches" data-rate="0.16" data-tier2="0.03">Watches (16% 鈮?1.5K, 3% >$1.5K)</option><option value="jewelry" data-rate="0.20" data-tier1="0.15" data-tier2="0.10" data-tier3="0.05" data-min="1.00">Jewelry (20% 鈮?100, 15% $100-$1K, 10% $1K-$5K, 5% >$5K, min $1)</option><option value="auto" data-rate="0.12">Auto Parts / SAE (12%)</option><option value="amazon_device" data-rate="0.45" data-cap="0.30">Amazon Device Accessories (45%, capped $0.30)</option></select></div>
+              <div class="input"><select id="cat"><option value="most" selected data-rate="0.15">Most categories (15%)</option><option value="electronics" data-rate="0.08" data-tier="0.15">Electronics / Computers (8% &le;100, 15% >$100)</option><option value="cell_phones" data-rate="0.08" data-tier="0.15">Cell Phones (8% &le;100, 15% >$100)</option><option value="beauty_grocery" data-rate="0.08">Beauty / Grocery (8%)</option><option value="clothing" data-rate="0.17">Clothing / Shoes (17%)</option><option value="books" data-rate="0.05" data-tier1="0.10" data-tier2="0.17" data-closing="1.80">Books / Movies / Music (5% &le;15, 10% $15-$20, 17% >$20 + $1.80 closing)</option><option value="watches" data-rate="0.16" data-tier2="0.03">Watches (16% &le;1.5K, 3% >$1.5K)</option><option value="jewelry" data-rate="0.20" data-tier1="0.15" data-tier2="0.10" data-tier3="0.05" data-min="1.00">Jewelry (20% &le;100, 15% $100-$1K, 10% $1K-$5K, 5% >$5K, min $1)</option><option value="auto" data-rate="0.12">Auto Parts / SAE (12%)</option><option value="amazon_device" data-rate="0.45" data-cap="0.30">Amazon Device Accessories (45%, capped $0.30)</option></select></div>
             </div>
 
             <div class="calc-field">
@@ -90,7 +111,7 @@
 
             <div class="calc-field">
               <label for="isLowInv">Inventory level</label>
-              <div class="input"><select id="isLowInv"><option value="healthy" selected>Healthy (鈮?8 days supply)</option><option value="low">Low (&lt;28 days supply)</option></select></div>
+              <div class="input"><select id="isLowInv"><option value="healthy" selected>Healthy (&le;8 days supply)</option><option value="low">Low (&lt;28 days supply)</option></select></div>
             </div>
 
             <div class="calc-field">

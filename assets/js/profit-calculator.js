@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   // === 2026 Amazon FBA US fee tables (shared with fba-calculator) ===
@@ -66,21 +66,21 @@
       // 45% capped $0.30
       ref = Math.min(salePrice * data.rate, data.cap);
     } else if (category === 'electronics' || category === 'cell_phones') {
-      // 鈮?100: 8%, >$100: 15%
+      // ≤100: 8%, >$100: 15%
       if (salePrice <= 100) ref = salePrice * data.rate;
       else ref = 100 * data.rate + (salePrice - 100) * data.tier1;
     } else if (category === 'books') {
-      // 鈮?15: 5%, $15-$20: 10%, >$20: 17% + closing fee $1.80
+      // ≤15: 5%, $15-$20: 10%, >$20: 17% + closing fee $1.80
       if (salePrice <= 15) ref = salePrice * data.rate;
       else if (salePrice <= 20) ref = 15 * data.rate + (salePrice - 15) * data.tier1;
       else ref = 15 * data.rate + 5 * data.tier1 + (salePrice - 20) * data.tier2;
       ref += data.closing;
     } else if (category === 'watches') {
-      // 鈮?1500: 16%, >$1500: 3%
+      // ≤1500: 16%, >$1500: 3%
       if (salePrice <= 1500) ref = salePrice * data.rate;
       else ref = 1500 * data.rate + (salePrice - 1500) * data.tier2;
     } else if (category === 'jewelry') {
-      // 鈮?100: 20% (min $1), $100-$1K: 15%, $1K-$5K: 10%, >$5K: 5%
+      // ≤100: 20% (min $1), $100-$1K: 15%, $1K-$5K: 10%, >$5K: 5%
       if (salePrice <= 100) ref = Math.max(salePrice * data.rate, data.min);
       else if (salePrice <= 1000) ref = 100 * data.rate + (salePrice - 100) * data.tier1;
       else if (salePrice <= 5000) ref = 100 * data.rate + 900 * data.tier1 + (salePrice - 1000) * data.tier2;

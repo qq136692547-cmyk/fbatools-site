@@ -1,6 +1,6 @@
-﻿/* ============================================================
+/* ============================================================
    FBATools / DengTTSTools shared stylesheet
-   2026-06-26 v3 鈥?vivid gradient hero, glass calc window, color-edge tool cards
+   2026-06-26 v3 —vivid gradient hero, glass calc window, color-edge tool cards
    ============================================================ */
 
 :root {
@@ -183,7 +183,7 @@ body.home .main-nav a[aria-current="page"] { color: #fff; background: rgba(255, 
 }
 
 /* ============================================================
-   HOME PAGE 鈥?v3 vivid redesign
+   HOME PAGE —v3 vivid redesign
    ============================================================ */
 body.home { color: #111114; overflow-x: hidden; }
 
@@ -791,7 +791,7 @@ body.home :focus-visible { outline-color: #fff; }
 
 
 /* ============================================================
-   v3 ADDITIVE 鈥?hero stats, kbd, hover tilt, tab demo upgrade
+   v3 ADDITIVE —hero stats, kbd, hover tilt, tab demo upgrade
    Keeps all existing classes intact.
    ============================================================ */
 
