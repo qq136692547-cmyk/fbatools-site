@@ -1,20 +1,19 @@
 <!doctype html>
-<html lang="en" translate="no">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Amazon FBA Calculator 2026 &mdash; FBA Fees & Profit | FBATools</title>
+<title>Amazon FBA Calculator 2026 — FBA Fees &amp; Profit | FBATools</title>
 <meta name="description" content="Free Amazon FBA calculator for 2026. Calculate FBA fulfillment fees, referral fees, inbound placement fees, low-inventory fees, storage fees and true net profit." />
 <meta name="keywords" content="amazon fba calculator, fba fee calculator, fba profit calculator, amazon fba fees 2026, fba inbound placement fee, fba low inventory fee" />
 <link rel="canonical" href="https://fbatools.zh.kg/tools/fba-calculator/" />
 <meta property="og:title" content="Amazon FBA Calculator 2026" />
 <meta property="og:description" content="Calculate FBA fees, profit margins, and ROI instantly. Updated for 2026." />
 <meta property="og:url" content="https://fbatools.zh.kg/tools/fba-calculator/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="FBATools" />
-<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
 <link rel="stylesheet" href="/assets/css/site.css" />
 <script type="application/ld+json">
 {
@@ -27,44 +26,17 @@
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 }
 </script>
-
-<meta property="og:image" content="https://fbatools.zh.kg/assets/images/og-default.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon FBA Calculator 2026 &mdash; FBA Fees & Profit">
-<meta name="twitter:description" content="Free Amazon FBA calculator for 2026. Calculate FBA fulfillment fees, referral fees, inbound placement fees, low-inventory fees, storage fees and true net profit.">
-<meta name="twitter:image" content="https://fbatools.zh.kg/assets/images/og-default.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://fbatools.zh.kg/tools/fba-calculator/#breadcrumb",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://fbatools.zh.kg/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Amazon FBA Calculator 2026",
-      "item": "https://fbatools.zh.kg/tools/fba-calculator/"
-    }
-  ]
-}
-</script>
 </head>
 <body class="tool-calc">
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="logo">
-      <span class="logo-mark">FT</span>
+      <img src="/assets/images/logo.svg" alt="" />
       <span>FBATools</span>
     </a>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/tools/fba-calculator/" class="active" aria-current="page">FBA Calculator</a>
+      <a href="/tools/fba-calculator/" aria-current="page">FBA Calculator</a>
       <a href="/tools/profit-calculator/">Profit</a>
       <a href="/tools/fba-vs-fbm/">FBA vs FBM</a>
       <a href="/blog/">Blog</a>
@@ -72,271 +44,214 @@
   </div>
 </header>
 
-<main id="main" class="tool-calc">
+<main id="main" class="tool-calc-main">
   <div class="container">
-  <h1 class="tool-title">Amazon FBA Calculator 2026</h1>
+    <div class="tool-header">
+      <span class="eyebrow"><span class="dot"></span> 2026 fee schedule</span>
+      <h1>Amazon FBA Calculator</h1>
+      <p class="subtitle">Every Amazon fee on every FBA unit. Real-time net profit per sale.</p>
+    </div>
 
-    <div class="calc-window" role="region" aria-label="Amazon FBA calculator">
-      <div class="demo-tabs-bar">
-        <div class="demo-traffic" aria-hidden="true"><span></span><span></span><span></span></div>
-        <button class="demo-tab is-active" data-tab="calc" type="button">
-          <span>&gt;_</span> fba-calculator <span class="demo-tab-kbd"><span class="kbd">F</span></span>
-        </button>
-        <span class="demo-pill">LIVE</span>
+    <div class="calc-window">
+      <div class="calc-titlebar">
+        <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="calc-name">fba-calculator.js</span>
+        <span class="calc-badge">LIVE</span>
       </div>
-
-      <div class="demo-tabpanel is-active" data-panel="calc">
-        <div class="calc-body">
-          <div class="calc-inputs">
-            <div class="calc-field">
-              <label for="salePrice">Sale price</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="salePrice" value="29.99" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="category">Category</label>
-              <div class="input"><select id="category"><option value="most" selected data-rate="0.15">Most categories (15%)</option><option value="electronics" data-rate="0.08" data-tier="0.15">Electronics / Computers (8% &le;100, 15% >$100)</option><option value="cell_phones" data-rate="0.08" data-tier="0.15">Cell Phones (8% &le;100, 15% >$100)</option><option value="beauty_grocery" data-rate="0.08">Beauty / Grocery (8%)</option><option value="clothing" data-rate="0.17">Clothing / Shoes (17%)</option><option value="books" data-rate="0.05" data-tier1="0.10" data-tier2="0.17" data-closing="1.80">Books / Movies / Music (5% &le;15, 10% $15-$20, 17% >$20 + $1.80 closing)</option><option value="watches" data-rate="0.16" data-tier2="0.03">Watches (16% &le;1.5K, 3% >$1.5K)</option><option value="jewelry" data-rate="0.20" data-tier1="0.15" data-tier2="0.10" data-tier3="0.05" data-min="1.00">Jewelry (20% &le;100, 15% $100-$1K, 10% $1K-$5K, 5% >$5K, min $1)</option><option value="auto" data-rate="0.12">Auto Parts / SAE (12%)</option><option value="amazon_device" data-rate="0.45" data-cap="0.30">Amazon Device Accessories (45%, capped $0.30)</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="cogs">Product cost</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="cogs" value="6.50" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="shippingInbound">Inbound shipping</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="shippingInbound" value="1.20" step="0.01" min="0" /></div>
-              <div class="hint">Freight + duty + last-mile to FC, per unit</div>
-            </div>
-
-            <div class="calc-field">
-              <label for="sizeTier">FBA size tier</label>
-              <div class="input"><select id="sizeTier"><option value="small_standard">Small Standard (&le; 1 lb, &le; 12&times;8&times;2 in)</option><option value="large_standard" selected>Large Standard (&le; 1 lb, &le; 18&times;14&times;8 in)</option><option value="small_oversize">Small Oversize (&le; 10 lb)</option><option value="medium_oversize">Medium Oversize</option><option value="large_oversize">Large Oversize (&le; 150 lb)</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="storageMonths">Warehouse months</label>
-              <div class="input"><input type="number" id="storageMonths" value="1" step="1" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="isQ4">Q4 storage</label>
-              <div class="input"><select id="isQ4"><option value="0">No</option><option value="1" selected>Yes</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="inventoryLevel">Inventory level</label>
-              <div class="input"><select id="inventoryLevel"><option value="ok">Healthy &mdash; Low-Inventory Fee does not apply</option><option value="low" selected>Low (&lt;28 days) &mdash; fee applies</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="placement">Placement program</label>
-              <div class="input"><select id="placement"><option value="minimal">Minimal &mdash; Amazon assigns FCs</option><option value="partial" selected>Partial &mdash; you pick some FCs</option><option value="amazon_partnered">Amazon Partnered Carrier</option></select></div>
-            </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <h2>Inputs</h2>
+          <div class="form-row">
+            <label for="salePrice">Sale price (USD)</label>
+            <input type="number" id="salePrice" value="29.99" step="0.01" min="0" />
           </div>
-
-          <div class="calc-results">
-          <div class="calc-results-head"><span class="calc-results-title">Results</span><button class="copy-results-btn" type="button" data-copy-results aria-label="Copy all results to clipboard">Copy results</button></div>
-            <div class="calc-result-row"><span class="lbl">Sale price</span><span class="val" id="r_sale">$29.99</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;Referral fee</span><span class="val" id="r_referral">&minus;$4.50</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;FBA fulfillment</span><span class="val" id="r_fulfillment">&minus;$4.98</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;Inbound placement</span><span class="val" id="r_placement">&minus;$0.21</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;Low-inventory fee</span><span class="val" id="r_lowInv">&minus;$0.35</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;Storage fee</span><span class="val" id="r_storage">&minus;$0.10</span></div>
-            <div class="calc-result-row"><span class="lbl">= Amazon proceeds</span><span class="val" id="r_proceeds">$19.85</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;COGS</span><span class="val" id="r_cogs">&minus;$6.50</span></div>
-            <div class="calc-result-row negative"><span class="lbl">&minus;Inbound shipping</span><span class="val" id="r_ship">&minus;$1.20</span></div>
-            <div class="calc-result-row highlight"><span class="lbl">Net profit per unit</span><span class="val" id="r_profit">$12.15</span></div>
-            <div class="calc-result-row highlight"><span class="lbl">Margin &middot; ROI</span><span class="val" id="r_roi">40.5% / 157.8%</span></div>
+          <div class="form-row">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="0.15" selected>Most categories (15%)</option>
+              <option value="0.08">Electronics / Computers (8%)</option>
+              <option value="0.08">Cell Phones / Beauty / Grocery (8%)</option>
+              <option value="0.17">Clothing / Shoes (17%)</option>
+              <option value="0.20">Jewelry (20%, $250+) (5%)</option>
+              <option value="0.45">Amazon Device Accessories (45%, capped $0.30)</option>
+            </select>
           </div>
+          <div class="form-row">
+            <label for="cogs">Product cost (COGS)</label>
+            <input type="number" id="cogs" value="6.50" step="0.01" min="0" />
+          </div>
+          <div class="form-row">
+            <label for="shippingInbound">Inbound shipping per unit</label>
+            <input type="number" id="shippingInbound" value="1.20" step="0.01" min="0" />
+            <div class="hint">Freight + duty + last-mile to FC, per unit</div>
+          </div>
+          <div class="form-row">
+            <label for="sizeTier">FBA size tier</label>
+            <select id="sizeTier">
+              <option value="small_standard">Small Standard (&le;6 oz, &le;10&times;8&times;2 in)</option>
+              <option value="large_standard" selected>Large Standard (&le;1 lb, &le;18&times;14&times;8 in)</option>
+              <option value="small_oversize">Small Oversize (&le;50 lb, &le;108&times;84&times;42 in)</option>
+              <option value="medium_oversize">Medium Oversize</option>
+              <option value="large_oversize">Large Oversize (&le;150 lb)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="weight">Unit weight (lb)</label>
+            <input type="number" id="weight" value="0.75" step="0.01" min="0" />
+          </div>
+          <div class="form-row">
+            <label for="storageMonths">Months in warehouse</label>
+            <input type="number" id="storageMonths" value="1" step="0.1" min="0" />
+          </div>
+          <div class="form-row">
+            <label for="isQ4">Q4 storage (Oct&ndash;Dec)</label>
+            <select id="isQ4">
+              <option value="0">No</option>
+              <option value="1" selected>Yes</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="inventoryLevel">Inventory level</label>
+            <select id="inventoryLevel">
+              <option value="ok">Healthy &mdash; Low-Inventory Fee does not apply</option>
+              <option value="low" selected>Low (&lt;28 days) &mdash; fee applies</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="placement">Inbound placement program</label>
+            <select id="placement">
+              <option value="minimal">Minimal &mdash; Amazon assigns FCs</option>
+              <option value="partial" selected>Partial &mdash; you pick some FCs</option>
+              <option value="amazon_partnered">Amazon Partnered Carrier</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-results-head">
+            <span class="calc-results-title">Results</span>
+            <button class="copy-results-btn" type="button" data-copy-target="results">Copy</button>
+          </div>
+          <div class="result-row"><span class="label">Sale price</span><span class="value" id="r_sale">$29.99</span></div>
+          <div class="result-row negative"><span class="label">&minus; Referral fee</span><span class="value" id="r_referral">&minus;$4.50</span></div>
+          <div class="result-row negative"><span class="label">&minus; FBA fulfillment</span><span class="value" id="r_fulfillment">&minus;$4.98</span></div>
+          <div class="result-row negative"><span class="label">&minus; Inbound placement</span><span class="value" id="r_placement">&minus;$0.21</span></div>
+          <div class="result-row negative"><span class="label">&minus; Low-inventory fee</span><span class="value" id="r_lowInv">&minus;$0.35</span></div>
+          <div class="result-row negative"><span class="label">&minus; Storage fee</span><span class="value" id="r_storage">&minus;$0.10</span></div>
+          <div class="result-row"><span class="label">= Amazon proceeds</span><span class="value" id="r_proceeds">$19.85</span></div>
+          <div class="result-row negative"><span class="label">&minus; COGS</span><span class="value" id="r_cogs">&minus;$6.50</span></div>
+          <div class="result-row negative"><span class="label">&minus; Inbound shipping</span><span class="value" id="r_ship">&minus;$1.20</span></div>
+          <div class="result-row highlight"><span class="label">Net profit per unit</span><span class="value" id="r_profit">$12.15</span></div>
+          <div class="result-row highlight"><span class="label">Margin &middot; ROI</span><span class="value" id="r_roi">40.5% / 157.8%</span></div>
+          <p class="source-note">Source: Amazon Seller Central 2026 fee schedule &middot; Verified Jan 15 2026 &middot; Does not include +3.5% Fuel &amp; Logistics Surcharge (effective Apr 17 2026) or Amazon Ads spend. Actual invoices may differ by &plusmn;2%.</p>
         </div>
       </div>
     </div>
-  </div>
 
-
-<nav class="nextstep" aria-label="Next tools to try">
-  <div class="nextstep-head">Next step</div>
-  <div class="nextstep-grid">
-    <a class="nextstep-card" href="/tools/profit-calculator/">
-      <span class="nextstep-name">Profit Calculator</span>
-      <span class="nextstep-desc">Turn these fees into a real margin after COGS &amp; shipping.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-    <a class="nextstep-card" href="/tools/fba-vs-fbm/">
-      <span class="nextstep-name">FBA vs FBM</span>
-      <span class="nextstep-desc">Compare FBA fees against FBM to pick the right channel.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-    <a class="nextstep-card" href="/blog/amazon-fba-fees-2026/">
-      <span class="nextstep-name">2026 FBA Fee Guide</span>
-      <span class="nextstep-desc">Every rate, explained&mdash;with the edge cases calculators miss.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-  </div>
-</nav>
-
-<div class="subscribe-wrap subscribe-inline">
-  <p class="si-label">Want a fee-change alert? We email when Amazon updates referral, fulfillment, or storage fees.</p>
-  <form class="subscribe-form" novalidate>
-    <input type="email" name="email" placeholder="you@store.com" aria-label="Email address" required>
-    <button type="submit" class="btn btn-primary" style="padding:12px 18px">Subscribe</button>
-  </form>
-  <p class="subscribe-done" role="status">&#10003; Thanks! Check your inbox to confirm.</p>
-</div>
-
-<!-- HOW-IT-WORKS START -->
-<section class="how-it-works" aria-label="How this tool works" style="background:#fff; color:#2F3437; padding:var(--s-7) 0; --ink:#2F3437; --ink-soft:#787774; --ink-dim:#B4B2AD; --line:#EAEAEA; --line-soft:#F0EFEC; --accent:#111111;">
-  <div class="container" style="max-width:860px;">
-
-    <h2 style="margin-top:0;">How the Amazon FBA Calculator Works</h2>
-    <p style="line-height:1.6;">The Amazon FBA calculator takes your sale price, product category, size tier, and cost inputs, then applies Amazon's full 2026 fee schedule to show what you actually keep per unit. The tool calculates referral fees (8%&ndash;17% by category), FBA fulfillment fees (by size tier), inbound placement fees, low-inventory fees, and monthly storage costs. It also factors in your product cost and inbound shipping to reveal net profit, margin, and ROI. The result is a complete fee stack that matches what Amazon will deduct from your settlement &mdash; no surprises on payday.</p>
-
-    <h2 style="margin-top:var(--s-6);">Fee Breakdown</h2>
-    <p style="line-height:1.6;">Amazon FBA fees are notoriously complex because they depend on multiple variables: category, size, weight, storage duration, and inventory health. Many sellers only calculate the referral fee and fulfillment fee, then get hit with placement and low-inventory surcharges they didn't budget for. The table below lists every fee component this calculator tracks. Knowing all seven helps you avoid the hidden costs that quietly erode FBA margins.</p>
-    <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; font-size:.92rem; margin:var(--s-4) 0;">
-      <thead>
-        <tr style="background:#0B0B0F; color:#fff;">
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Fee Name</th>
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Rate / Amount</th>
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Referral fee</td>
-          <td style="padding:10px 14px;">8%&ndash;17% of sale</td>
-          <td style="padding:10px 14px;">Category-dependent; minimum $0.30</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">FBA fulfillment fee</td>
-          <td style="padding:10px 14px;">$3.06&ndash;$75.86</td>
-          <td style="padding:10px 14px;">Based on size tier and weight</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Inbound placement fee</td>
-          <td style="padding:10px 14px;">$0.21&ndash;$0.70+</td>
-          <td style="padding:10px 14px;">Depends on placement program</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">Low-inventory fee</td>
-          <td style="padding:10px 14px;">$0.15&ndash;$0.50+</td>
-          <td style="padding:10px 14px;">Triggers when supply &lt; 28 days</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Monthly storage</td>
-          <td style="padding:10px 14px;">$0.87&ndash;$2.40/cu ft</td>
-          <td style="padding:10px 14px;">Higher Oct&ndash;Dec; charged monthly</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">Aged inventory surcharge</td>
-          <td style="padding:10px 14px;">$2.15&ndash;$6.90/cu ft</td>
-          <td style="padding:10px 14px;">Items aged 181+ days</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 14px; font-weight:600;">Returns processing</td>
-          <td style="padding:10px 14px;">$1.80&ndash;$5.20+</td>
-          <td style="padding:10px 14px;">Per returned unit, by tier</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="nextstep">
+      <div class="nextstep-head">Next step</div>
+      <div class="nextstep-grid">
+        <a class="nextstep-card" href="/tools/profit-calculator/">
+          <span class="nextstep-name">FBA vs FBM Profit</span>
+          <span class="nextstep-desc">Compare fulfillment methods side by side</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+        <a class="nextstep-card" href="/blog/amazon-fba-fees-2026/">
+          <span class="nextstep-name">2026 Fee Guide</span>
+          <span class="nextstep-desc">Every fee explained with examples</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+        <a class="nextstep-card" href="/blog/">
+          <span class="nextstep-name">Blog</span>
+          <span class="nextstep-desc">Amazon selling strategy &amp; tips</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+      </div>
     </div>
 
-    <h2 style="margin-top:var(--s-6);">How to Use This Calculator</h2>
-    <ol style="color:var(--ink-soft); line-height:1.8; padding-left:1.4em;">
-      <li>Enter your <strong>sale price</strong> in the first field.</li>
-      <li>Select your product <strong>category</strong> &mdash; this sets the referral fee rate.</li>
-      <li>Input your <strong>product cost</strong> (COGS) per unit.</li>
-      <li>Enter your <strong>inbound shipping</strong> cost per unit (freight + last-mile to FC).</li>
-      <li>Choose your <strong>FBA size tier</strong> from the dropdown.</li>
-      <li>Set <strong>warehouse months</strong>, <strong>Q4 storage</strong>, <strong>inventory level</strong>, and <strong>placement program</strong> to match your situation.</li>
-    </ol>
+    <section style="max-width:880px; margin:64px auto 0;">
+      <div class="section-header">
+        <h2>How the five Amazon FBA fees work</h2>
+        <span class="section-tag">01 / explainer</span>
+      </div>
+      <p class="source-note" style="font-size:15px; line-height:1.6; margin-bottom:32px;">Together these typically take 30%&ndash;45% of your sale price. Model them before you place a purchase order &mdash; a product that looks profitable on Amazon's own calculator can flip negative once you include the placement and low-inventory fees.</p>
+      <div class="features">
+        <div class="feature"><div class="icon">[ 01 ]</div><h3>Referral fee</h3><p>6%&ndash;15% (some categories up to 45% with caps). Applied to the total sale price including shipping. Minimum $0.30 per item.</p></div>
+        <div class="feature"><div class="icon">[ 02 ]</div><h3>FBA fulfillment</h3><p>$3.30 (small standard) to $75.86 (large oversize). Plus the new 3.5% Fuel &amp; Logistics Surcharge from April 17 2026.</p></div>
+        <div class="feature"><div class="icon">[ 03 ]</div><h3>Inbound placement</h3><p>$0 to $0.46 per unit depending on size tier and your placement program. Effective April 1 2024. Skipped by most calculators.</p></div>
+        <div class="feature"><div class="icon">[ 04 ]</div><h3>Low-inventory fee</h3><p>$0.32 to $1.10 per unit sold when days-of-supply drops below 28. Effective April 1 2024. Skipped by most calculators.</p></div>
+        <div class="feature"><div class="icon">[ 05 ]</div><h3>Monthly storage</h3><p>$0.87/cu ft (Jan&ndash;Sep), $2.40/cu ft (Q4) for standard size. $6.90/cu ft long-term surcharge after 365 days.</p></div>
+        <div class="feature"><div class="icon">[ 06 ]</div><h3>+ Optional costs</h3><p>Returns processing, removal/disposal, aged inventory surcharges (181+ days), Amazon Ads spend. Not in the calculator above.</p></div>
+      </div>
+    </section>
 
-    <h2 style="margin-top:var(--s-6);">Frequently Asked Questions</h2>
-    <div class="faq" style="margin-top:var(--s-4);">
-      <details>
-        <summary>What is an FBA fee?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>FBA fees are the charges Amazon deducts when it fulfills your orders. They include the referral fee (a commission on each sale), the fulfillment fee (picking, packing, and shipping), storage fees, and optional surcharges like low-inventory and aged-inventory fees. Together, they typically total 25&ndash;35% of your sale price.</p>
-        </div>
-      </details>
-      <details>
-        <summary>How often are storage fees billed?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>Amazon bills storage fees monthly, calculated based on your average daily inventory volume (cubic feet) during that month. Rates increase significantly from October through December for Q4 peak season. The calculator lets you set your warehouse months and Q4 toggle to estimate accurately.</p>
-        </div>
-      </details>
-      <details>
-        <summary>What is the low-inventory fee?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>The low-inventory fee is a surcharge Amazon applies when your FBA inventory supply falls below 28 days of historical demand. It's designed to discourage understocking. The fee varies by size tier and can add $0.15&ndash;$0.50+ per unit. Select &ldquo;Low&rdquo; in the Inventory level field to see its impact.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Does the calculator include the referral fee?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>Yes. The referral fee is always included &mdash; it's Amazon's commission on every sale, ranging from 8% to 17% depending on category. It's the first deduction shown in the results panel, before fulfillment and storage fees are applied.</p>
-        </div>
-      </details>
-      <details>
-        <summary>How accurate are the fee calculations?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>The calculator uses Amazon's published 2026 fee schedule and is updated regularly. However, actual fees can vary slightly based on product dimensions, weight rounding, promotional waivers, and category-specific rules. Use it for planning and pricing decisions, then verify against your actual settlement statements.</p>
-        </div>
-      </details>
-    </div>
-
-    <h2 style="margin-top:var(--s-6);">Related Reading</h2>
-    <p style="line-height:1.6;">Ready to see your full profit picture including ad spend and FBM comparison? The <a href="/tools/profit-calculator/">FBA profit calculator</a> adds Amazon Ads, FBM outbound shipping, and side-by-side FBA vs FBM analysis to your fee breakdown. For the complete 2026 fee reference with category tables and size tier thresholds, read our <a href="/blog/amazon-fba-fees-2026/">Amazon FBA fee guide</a>.</p>
-
+    <section style="max-width:880px; margin:64px auto 0;">
+      <div class="section-header">
+        <h2>FAQ</h2>
+        <span class="section-tag">02 / questions</span>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is this calculator accurate for 2026 Amazon FBA fees?<span class="sign" aria-hidden="true"></span></summary>
+          <p>Fee tables are sourced from Amazon's 2026 published US schedule, verified against the January 15 2026 announcement and cross-checked with FeeYield's June 27 2026 update. Real Amazon statements can differ by &plusmn;2% due to aged-inventory surcharges, removals, returns, and product-specific overrides.</p>
+        </details>
+        <details>
+          <summary>Does Amazon take 15% referral on every category?<span class="sign" aria-hidden="true"></span></summary>
+          <p>No. Most consumer categories are 15%, but Consumer Electronics, Computers, Cell Phones, Beauty, and Grocery are 8%. Clothing is 17%. Jewelry is 20% (5% for items over $250). Amazon Device Accessories are 45% capped at $0.30.</p>
+        </details>
+        <details>
+          <summary>What is the Inbound Placement Fee?<span class="sign" aria-hidden="true"></span></summary>
+          <p>Effective April 1 2024. Charged per unit shipped to Amazon, based on your size tier and the placement program you choose. "Minimal" (Amazon assigns FCs) is cheapest. "Partial" (you pick some FCs) is the middle tier. A typical 0.75 lb large-standard item on Partial pays $0.21 per unit.</p>
+        </details>
+        <details>
+          <summary>What is the Low-Inventory Fee?<span class="sign" aria-hidden="true"></span></summary>
+          <p>Effective April 1 2024. Charged per unit sold when your historical days-of-supply is below 28 days relative to recent demand. It applies only to standard-size units. The fix: keep at least 4 weeks of forward inventory for your best-selling SKUs &mdash; the penalty is more expensive than the carrying cost.</p>
+        </details>
+        <details>
+          <summary>What's the new Fuel &amp; Logistics Surcharge?<span class="sign" aria-hidden="true"></span></summary>
+          <p>Effective April 17 2026 in the US and Canada (Multi-Channel Fulfillment and Buy with Prime followed May 2). Amazon added a +3.5% surcharge on FBA fulfillment fees, calculated on the fulfillment fee (not your sale price). On a $4.75 fulfillment fee that's about $0.17 per unit. No end date announced.</p>
+        </details>
+      </div>
+    </section>
   </div>
-</section>
-<!-- HOW-IT-WORKS END -->
-
-
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="/">
-          <span class="logo-mark">FT</span>
-          <span>FBATools</span>
-        </a>
-        <p class="dim">Free Amazon FBA calculator &amp; seller tools.</p>
-      </div>
-      <div>
-        <h4>tools</h4>
-        <ul>
-          <li><a href="/tools/fba-calculator/">FBA Calculator</a></li>
-          <li><a href="/tools/profit-calculator/">Profit Calculator</a></li>
-          <li><a href="/tools/fba-vs-fbm/">FBA vs FBM</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>learn</h4>
-        <ul>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/blog/amazon-fba-fees-2026/">2026 Fee Guide</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>site</h4>
-        <ul>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="https://github.com/qq136692547-cmyk/fbatools-site">Source</a></li>
-          <li><a href="https://github.com/qq136692547-cmyk/fbatools-site/issues">Feedback</a></li>
-        </ul>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><img src="/assets/images/logo.svg" alt="" /><span>FBATools</span></a>
+      <p>Free Amazon FBA calculator and seller tools. Independent project, not affiliated with Amazon.com.</p>
     </div>
-    <p class="copyright">&copy; 2026 FBATools. Independent tool &mdash; not affiliated with Amazon.com.</p>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="/tools/fba-calculator/">FBA Calculator</a></li>
+        <li><a href="/tools/profit-calculator/">FBA vs FBM</a></li>
+        <li><a href="/tools/fba-vs-fbm/">FBA vs FBM Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/amazon-fba-fees-2026/">2026 Fee Guide</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </div>
+  <p class="copyright">
+    <span>&copy; 2026 FBATools. Independent tool, not affiliated with Amazon.com.</span>
+    <span class="links"><a href="/privacy/">Privacy</a><a href="/about/">About</a></span>
+  </p>
 </footer>
-
 <script src="/assets/js/fba-calculator.js"></script>
-<script src="/assets/js/ux.js"></script>
+<script src="/assets/js/copy-results.js"></script>
 </body>
 </html>

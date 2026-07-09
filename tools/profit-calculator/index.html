@@ -1,344 +1,153 @@
 <!doctype html>
-<html lang="en" translate="no">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Amazon FBA Profit Calculator: Net Margin & ROI 2026</title>
-<meta name="description" content="Amazon FBA profit calculator with all 2026 fees. See net profit, margin, and ROI per unit after referral, fulfillment, storage, and low-inventory fees." />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Amazon FBA vs FBM Profit Calculator 2026 | FBATools</title>
+<meta name="description" content="Side-by-side Amazon FBA vs FBM profit calculator. Compare net profit, margin and ROI between FBA and FBM fulfillment for any product." />
 <link rel="canonical" href="https://fbatools.zh.kg/tools/profit-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
 <link rel="stylesheet" href="/assets/css/site.css" />
-
-<meta property="og:title" content="Amazon FBA Profit Calculator: Net Margin & ROI 2026">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://fbatools.zh.kg/assets/images/og-default.jpg">
-<meta property="og:url" content="https://fbatools.zh.kg/tools/profit-calculator/">
-<meta property="og:description" content="Amazon FBA profit calculator with all 2026 fees. See net profit, margin, and ROI per unit after referral, fulfillment, storage, and low-inventory fees.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon FBA Profit Calculator: Net Margin & ROI 2026">
-<meta name="twitter:description" content="Amazon FBA profit calculator with all 2026 fees. See net profit, margin, and ROI per unit after referral, fulfillment, storage, and low-inventory fees.">
-<meta name="twitter:image" content="https://fbatools.zh.kg/assets/images/og-default.jpg">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Amazon FBA Profit Calculator 2026",
-  "url": "https://fbatools.zh.kg/tools/profit-calculator/",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "description": "Amazon FBA profit calculator with all 2026 fees. See net profit, margin, and ROI per unit after referral, fulfillment, storage, and low-inventory fees."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://fbatools.zh.kg/tools/profit-calculator/#breadcrumb",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://fbatools.zh.kg/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Amazon FBA Profit Calculator 2026",
-      "item": "https://fbatools.zh.kg/tools/profit-calculator/"
-    }
-  ]
-}
-</script>
 </head>
-<body>
+<body class="tool-calc">
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo"><span class="logo-mark">FT</span><span>FBATools</span></a>
-    <nav class="main-nav">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo.svg" alt="" />
+      <span>FBATools</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
       <a href="/tools/fba-calculator/">FBA Calculator</a>
-      <a href="/tools/profit-calculator/" class="active" aria-current="page">Profit</a>
+      <a href="/tools/profit-calculator/" aria-current="page">Profit</a>
       <a href="/tools/fba-vs-fbm/">FBA vs FBM</a>
       <a href="/blog/">Blog</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="tool-calc">
+<main id="main" class="tool-calc-main">
   <div class="container">
-  <h1 class="tool-title">Amazon FBA Profit Calculator 2026</h1>
+    <div class="tool-header">
+      <span class="eyebrow"><span class="dot"></span> 2026 fee schedule</span>
+      <h1>FBA vs FBM Profit Calculator</h1>
+      <p class="subtitle">Which fulfillment method actually makes you more money in 2026? Side-by-side, real-time.</p>
+    </div>
 
-    <div class="calc-window" role="region" aria-label="FBA vs FBM profit calculator">
-      <div class="demo-tabs-bar">
-        <div class="demo-traffic" aria-hidden="true"><span></span><span></span><span></span></div>
-        <button class="demo-tab is-active" data-tab="calc" type="button">
-          <span>&gt;_</span> profit-calculator <span class="demo-tab-kbd"><span class="kbd">P</span></span>
-        </button>
-        <span class="demo-pill">LIVE</span>
+    <div class="calc-window">
+      <div class="calc-titlebar">
+        <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="calc-name">profit-compare.js</span>
+        <span class="calc-badge">LIVE</span>
       </div>
-
-      <div class="demo-tabpanel is-active" data-panel="calc">
-        <div class="calc-body">
-          <div class="calc-inputs">
-            <div class="calc-field">
-              <label for="sale">Sale price</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="sale" value="29.99" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="cat">Category</label>
-              <div class="input"><select id="cat"><option value="most" selected data-rate="0.15">Most categories (15%)</option><option value="electronics" data-rate="0.08" data-tier="0.15">Electronics / Computers (8% &le;100, 15% >$100)</option><option value="cell_phones" data-rate="0.08" data-tier="0.15">Cell Phones (8% &le;100, 15% >$100)</option><option value="beauty_grocery" data-rate="0.08">Beauty / Grocery (8%)</option><option value="clothing" data-rate="0.17">Clothing / Shoes (17%)</option><option value="books" data-rate="0.05" data-tier1="0.10" data-tier2="0.17" data-closing="1.80">Books / Movies / Music (5% &le;15, 10% $15-$20, 17% >$20 + $1.80 closing)</option><option value="watches" data-rate="0.16" data-tier2="0.03">Watches (16% &le;1.5K, 3% >$1.5K)</option><option value="jewelry" data-rate="0.20" data-tier1="0.15" data-tier2="0.10" data-tier3="0.05" data-min="1.00">Jewelry (20% &le;100, 15% $100-$1K, 10% $1K-$5K, 5% >$5K, min $1)</option><option value="auto" data-rate="0.12">Auto Parts / SAE (12%)</option><option value="amazon_device" data-rate="0.45" data-cap="0.30">Amazon Device Accessories (45%, capped $0.30)</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="sizeTier">Size tier</label>
-              <div class="input"><select id="sizeTier"><option value="small_standard">Small Standard</option><option value="large_standard" selected>Large Standard</option><option value="small_oversize">Small Oversize</option><option value="medium_oversize">Medium Oversize</option><option value="large_oversize">Large Oversize</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="placement">Placement</label>
-              <div class="input"><select id="placement"><option value="minimal">Minimal (no discount)</option><option value="partial" selected>Partial (split)</option><option value="amazon_partnered">Amazon Partnered Carrier</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="isLowInv">Inventory level</label>
-              <div class="input"><select id="isLowInv"><option value="healthy" selected>Healthy (&le;8 days supply)</option><option value="low">Low (&lt;28 days supply)</option></select></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="cogs">Product cost</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="cogs" value="6.50" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="inbound">Inbound shipping to Amazon</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="inbound" value="1.20" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="shipOut">FBM outbound shipping per order</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="shipOut" value="4.50" step="0.01" min="0" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="ads">Amazon Ads (% of sale)</label>
-              <div class="input"><input type="number" id="ads" value="15" step="1" min="0" max="100" /></div>
-            </div>
-
-            <div class="calc-field">
-              <label for="storage">FBA monthly storage per unit</label>
-              <div class="input"><span class="prefix">$</span><input type="number" id="storage" value="0.30" step="0.01" min="0" /></div>
-            </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <h2>Inputs</h2>
+          <div class="form-row"><label for="sale">Sale price (USD)</label><input type="number" id="sale" value="29.99" step="0.01" /></div>
+          <div class="form-row"><label for="cat">Category</label>
+            <select id="cat">
+              <option value="0.15">Most categories (15%)</option>
+              <option value="0.08">Electronics (8%)</option>
+              <option value="0.17">Clothing (17%)</option>
+            </select>
           </div>
+          <div class="form-row"><label for="cogs">Product cost (COGS)</label><input type="number" id="cogs" value="6.50" step="0.01" /></div>
+          <div class="form-row"><label for="inbound">Inbound shipping to Amazon</label><input type="number" id="inbound" value="1.20" step="0.01" /></div>
+          <div class="form-row"><label for="shipOut">FBM outbound shipping per order</label><input type="number" id="shipOut" value="4.50" step="0.01" /></div>
+          <div class="form-row"><label for="ads">Amazon Ads (% of sale)</label><input type="number" id="ads" value="15" step="1" min="0" max="100" /></div>
+          <div class="form-row"><label for="storage">FBA monthly storage per unit</label><input type="number" id="storage" value="0.30" step="0.01" /></div>
+        </div>
 
-          <div class="calc-results">
-          <div class="calc-results-head"><span class="calc-results-title">Results</span><button class="copy-results-btn" type="button" data-copy-results aria-label="Copy all results to clipboard">Copy results</button></div>
-            <div class="calc-result-row"><span class="lbl">FBA total fees</span><span class="val" id="r_fba_fees">-$0.00</span></div>
-            <div class="calc-result-row"><span class="lbl">FBM total fees</span><span class="val" id="r_fbm_fees">-$0.00</span></div>
-            <div class="calc-result-row"><span class="lbl">FBA net profit per unit</span><span class="val" id="r_fba_profit">$0.00</span></div>
-            <div class="calc-result-row"><span class="lbl">FBM net profit per unit</span><span class="val" id="r_fbm_profit">$0.00</span></div>
-            <div class="calc-result-row"><span class="lbl">FBA margin</span><span class="val" id="r_fba_margin">0%</span></div>
-            <div class="calc-result-row"><span class="lbl">FBM margin</span><span class="val" id="r_fbm_margin">0%</span></div>
-            <div class="calc-result-row"><span class="lbl">FBA ROI</span><span class="val" id="r_fba_roi">0%</span></div>
-            <div class="calc-result-row"><span class="lbl">FBM ROI</span><span class="val" id="r_fbm_roi">0%</span></div>
-            <div class="calc-result-row highlight"><span class="lbl">Winner</span><span class="val" id="r_better">-</span></div>
+        <div class="calc-results">
+          <div class="calc-results-head">
+            <span class="calc-results-title">Comparison</span>
+            <button class="copy-results-btn" type="button" data-copy-target="results">Copy</button>
           </div>
+          <div class="result-row"><span class="label">FBA net profit per unit</span><span class="value" id="r_fba_profit">$0.00</span></div>
+          <div class="result-row"><span class="label">FBM net profit per unit</span><span class="value" id="r_fbm_profit">$0.00</span></div>
+          <div class="result-row"><span class="label">FBA margin</span><span class="value" id="r_fba_margin">0%</span></div>
+          <div class="result-row"><span class="label">FBM margin</span><span class="value" id="r_fbm_margin">0%</span></div>
+          <div class="result-row"><span class="label">FBA ROI</span><span class="value" id="r_fba_roi">0%</span></div>
+          <div class="result-row"><span class="label">FBM ROI</span><span class="value" id="r_fbm_roi">0%</span></div>
+          <div class="result-row highlight"><span class="label">Winner</span><span class="value" id="r_better">&mdash;</span></div>
         </div>
       </div>
     </div>
-  </div>
 
-
-<nav class="nextstep" aria-label="Next tools to try">
-  <div class="nextstep-head">Next step</div>
-  <div class="nextstep-grid">
-    <a class="nextstep-card" href="/tools/fba-calculator/">
-      <span class="nextstep-name">FBA Calculator</span>
-      <span class="nextstep-desc">Drill into each FBA fee line&mdash;referral, fulfillment, storage.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-    <a class="nextstep-card" href="/tools/fba-vs-fbm/">
-      <span class="nextstep-name">FBA vs FBM</span>
-      <span class="nextstep-desc">Compare FBA fees against FBM to pick the right channel.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-    <a class="nextstep-card" href="/blog/amazon-fba-fees-2026/">
-      <span class="nextstep-name">2026 FBA Fee Guide</span>
-      <span class="nextstep-desc">Every rate, explained&mdash;with the edge cases calculators miss.</span>
-      <span class="nextstep-arrow" aria-hidden="true">&rarr;</span>
-    </a>
-  </div>
-</nav>
-
-<div class="subscribe-wrap subscribe-inline">
-  <p class="si-label">Want a fee-change alert? We email when Amazon updates referral, fulfillment, or storage fees.</p>
-  <form class="subscribe-form" novalidate>
-    <input type="email" name="email" placeholder="you@store.com" aria-label="Email address" required>
-    <button type="submit" class="btn btn-primary" style="padding:12px 18px">Subscribe</button>
-  </form>
-  <p class="subscribe-done" role="status">&#10003; Thanks! Check your inbox to confirm.</p>
-</div>
-
-<!-- HOW-IT-WORKS START -->
-<section class="how-it-works" aria-label="How this tool works" style="background:#fff; color:#2F3437; padding:var(--s-7) 0; --ink:#2F3437; --ink-soft:#787774; --ink-dim:#B4B2AD; --line:#EAEAEA; --line-soft:#F0EFEC; --accent:#111111;">
-  <div class="container" style="max-width:860px;">
-
-    <h2 style="margin-top:0;">How the Amazon FBA Profit Calculator Works</h2>
-    <p style="line-height:1.6;">The Amazon FBA profit calculator combines Amazon's full fee schedule with your cost inputs to reveal true take-home profit per unit. You enter your sale price, category, size tier, product cost, and shipping costs. The tool calculates FBA fees (referral, fulfillment, storage, placement, low-inventory) and FBM fees (referral, outbound shipping) side by side, then subtracts everything from revenue to show net profit, margin, and ROI for both fulfillment methods. A winner declaration tells you which method earns more on your specific product.</p>
-
-    <h2 style="margin-top:var(--s-6);">Profit Breakdown</h2>
-    <p style="line-height:1.6;">FBA profit is a chain of deductions that starts with your sale price and ends with what hits your bank account. Many sellers calculate profit as price minus product cost minus the 15% referral fee &mdash; then wonder why their actual settlement is lower. The table below traces every line item from revenue to net profit. Tracking all eight components is the difference between guessing and knowing your real margin.</p>
-    <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; font-size:.92rem; margin:var(--s-4) 0;">
-      <thead>
-        <tr style="background:#0B0B0F; color:#fff;">
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Item Name</th>
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Rate / Amount</th>
-          <th style="text-align:left; padding:12px 14px; font-family:var(--font-data); font-weight:600; border-bottom:2px solid var(--brand-1,#F97316);">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Revenue</td>
-          <td style="padding:10px 14px;">Sale price per unit</td>
-          <td style="padding:10px 14px;">Your gross income before deductions</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">Product cost (COGS)</td>
-          <td style="padding:10px 14px;">Per-unit cost</td>
-          <td style="padding:10px 14px;">Sourcing or manufacturing cost</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Amazon referral</td>
-          <td style="padding:10px 14px;">8%&ndash;17% of sale</td>
-          <td style="padding:10px 14px;">Category-dependent commission</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">FBA fulfillment</td>
-          <td style="padding:10px 14px;">$3.06&ndash;$75.86</td>
-          <td style="padding:10px 14px;">Picking, packing, shipping per size tier</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Inbound placement</td>
-          <td style="padding:10px 14px;">$0.21&ndash;$0.70+</td>
-          <td style="padding:10px 14px;">FC placement program fee</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA); background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">Storage</td>
-          <td style="padding:10px 14px;">$0.87&ndash;$2.40/cu ft</td>
-          <td style="padding:10px 14px;">Monthly warehouse cost per unit</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--line,#EAEAEA);">
-          <td style="padding:10px 14px; font-weight:600;">Shipping to FBA</td>
-          <td style="padding:10px 14px;">Per-unit freight</td>
-          <td style="padding:10px 14px;">Cost to send inventory to Amazon</td>
-        </tr>
-        <tr style="background:#F7F6F3;">
-          <td style="padding:10px 14px; font-weight:600;">Net profit</td>
-          <td style="padding:10px 14px;">Revenue &minus; all costs</td>
-          <td style="padding:10px 14px;">Your actual take-home per unit</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="nextstep">
+      <div class="nextstep-head">Next step</div>
+      <div class="nextstep-grid">
+        <a class="nextstep-card" href="/tools/fba-calculator/">
+          <span class="nextstep-name">FBA Calculator</span>
+          <span class="nextstep-desc">Full fee breakdown per unit</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+        <a class="nextstep-card" href="/blog/amazon-fba-fees-2026/">
+          <span class="nextstep-name">2026 Fee Guide</span>
+          <span class="nextstep-desc">Every fee explained with examples</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+        <a class="nextstep-card" href="/blog/">
+          <span class="nextstep-name">Blog</span>
+          <span class="nextstep-desc">Amazon selling strategy &amp; tips</span>
+          <span class="nextstep-arrow">&rarr;</span>
+        </a>
+      </div>
     </div>
 
-    <h2 style="margin-top:var(--s-6);">How to Use This Calculator</h2>
-    <ol style="color:var(--ink-soft); line-height:1.8; padding-left:1.4em;">
-      <li>Enter your <strong>sale price</strong> &mdash; the price buyers pay on Amazon.</li>
-      <li>Select your product <strong>category</strong> to set the referral fee rate.</li>
-      <li>Choose your <strong>size tier</strong> (Small Standard, Large Standard, or Oversize).</li>
-      <li>Set your <strong>placement</strong> program and <strong>inventory level</strong> to match your FBA setup.</li>
-      <li>Enter your <strong>product cost</strong> and <strong>inbound shipping</strong> to Amazon per unit.</li>
-      <li>Input your <strong>FBM outbound shipping</strong> cost and <strong>Amazon Ads</strong> percentage for a full FBA vs FBM comparison.</li>
-    </ol>
-
-    <h2 style="margin-top:var(--s-6);">Frequently Asked Questions</h2>
-    <div class="faq" style="margin-top:var(--s-4);">
-      <details>
-        <summary>What is a good FBA profit margin?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>A solid FBA margin is 20%&ndash;30% after referral fees, fulfillment, storage, and product cost. Below 15% and you're vulnerable to fee hikes and return costs. Private label products often target 30%+ while wholesale resellers operate on thinner 10&ndash;15% margins with higher volume.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Does ROI include ad spend?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>Yes. The calculator subtracts your Amazon Ads spend (entered as a percentage of sale) before computing ROI. This gives you a realistic return figure that accounts for what you pay to acquire customers &mdash; not just the fees Amazon deducts from your settlement.</p>
-        </div>
-      </details>
-      <details>
-        <summary>How is break-even calculated?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>Break-even is the sale price where net profit equals zero &mdash; all fees and costs covered, nothing left over. If the calculator shows $0 net profit at your current price, you've found break-even. Anything above that price is your profit margin. Test different prices to find your minimum viable listing price.</p>
-        </div>
-      </details>
-      <details>
-        <summary>How does this compare to Seller Fulfilled Prime (SFP)?<span class="sign" aria-hidden="true"></span></summary>
-        <div class="answer">
-          <p>SFP lets FBM sellers earn the Prime badge while self-fulfilling. This calculator's FBM side shows your profit without SFP fees. To model SFP, add the per-unit SFP fee (typically $2&ndash;$4) to your FBM outbound shipping cost. SFP can be more profitable than FBA on bulky items where fulfillment fees are high.</p>
-        </div>
-      </details>
-    </div>
-
-    <h2 style="margin-top:var(--s-6);">Related Reading</h2>
-    <p style="line-height:1.6;">Need the fee breakdown without the profit analysis? The <a href="/tools/fba-calculator/">FBA calculator</a> isolates each Amazon fee component so you can see exactly what you're paying. For a deep dive into when FBA beats FBM &mdash; including Prime eligibility, Buy Box impact, and return handling &mdash; visit our <a href="/tools/fba-vs-fbm/">FBA vs FBM comparison</a> page.</p>
-
+    <section style="max-width:880px; margin:64px auto 0;">
+      <div class="section-header">
+        <h2>When FBA wins, when FBM wins</h2>
+        <span class="section-tag">01 / decision guide</span>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="icon">[ FBA ]</div><h3>FBA wins when</h3><p>Your product is small, light, turns fast, and Prime shipping gives you a Buy Box boost that outweighs the $3-6 FBA fee. Typical for items under 1 lb and under $40.</p></div>
+        <div class="feature"><div class="icon">[ FBM ]</div><h3>FBM wins when</h3><p>Your product is large, fragile, has long shelf life, or your self-fulfilled shipping is under $4. Also useful for testing a new SKU without locking up inventory fees.</p></div>
+        <div class="feature"><div class="icon">[ &infin; ]</div><h3>The break-even</h3><p>For a 0.75 lb item in Home &amp; Kitchen, FBM starts to win when your outbound shipping drops below ~$3.50. Below that, FBA's $4.98 + placement + storage + low-inventory fees outweigh Prime's Buy Box benefit.</p></div>
+      </div>
+    </section>
   </div>
-</section>
-<!-- HOW-IT-WORKS END -->
-
-
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="/">
-          <span class="logo-mark">FT</span>
-          <span>FBATools</span>
-        </a>
-        <p class="dim">Free Amazon FBA calculator &amp; seller tools.</p>
-      </div>
-      <div>
-        <h4>tools</h4>
-        <ul>
-          <li><a href="/tools/fba-calculator/">FBA Calculator</a></li>
-          <li><a href="/tools/profit-calculator/">Profit Calculator</a></li>
-          <li><a href="/tools/fba-vs-fbm/">FBA vs FBM</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>learn</h4>
-        <ul>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/blog/amazon-fba-fees-2026/">2026 Fee Guide</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>site</h4>
-        <ul>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="https://github.com/qq136692547-cmyk/fbatools-site">Source</a></li>
-          <li><a href="https://github.com/qq136692547-cmyk/fbatools-site/issues">Feedback</a></li>
-        </ul>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/"><img src="/assets/images/logo.svg" alt="" /><span>FBATools</span></a>
+      <p>Free Amazon FBA calculator and seller tools. Independent project, not affiliated with Amazon.com.</p>
     </div>
-    <p class="copyright">&copy; 2026 FBATools. Independent tool &mdash; not affiliated with Amazon.com.</p>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="/tools/fba-calculator/">FBA Calculator</a></li>
+        <li><a href="/tools/profit-calculator/">FBA vs FBM</a></li>
+        <li><a href="/tools/fba-vs-fbm/">FBA vs FBM Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/amazon-fba-fees-2026/">2026 Fee Guide</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </div>
+  <p class="copyright">
+    <span>&copy; 2026 FBATools. Independent tool, not affiliated with Amazon.com.</span>
+    <span class="links"><a href="/privacy/">Privacy</a><a href="/about/">About</a></span>
+  </p>
 </footer>
-
 <script src="/assets/js/profit-calculator.js"></script>
-<script src="/assets/js/ux.js"></script>
+<script src="/assets/js/copy-results.js"></script>
 </body>
 </html>
