@@ -1,0 +1,19 @@
+# FBATools
+
+> Free Amazon FBA fee and profit calculator. Independent tool, not affiliated with Amazon.
+
+## Tools
+
+- [Amazon FBA Calculator](https://fbatools.zh.kg/): Full fee breakdown: referral, fulfillment, inbound placement, low-inventory, storage, and fuel surcharge.
+- [Amazon FBA Profit Calculator](https://fbatools.zh.kg/tools/tiktok-profit-calculator/): Net profit after COGS, shipping, ad spend, and all FBA fees.
+- [FBA vs FBM Comparison](https://fbatools.zh.kg/tools/fba-vs-fbm/): Side-by-side profit comparison between FBA and FBM.
+
+## Guides
+
+- [Amazon FBA Fees 2026](https://fbatools.zh.kg/blog/amazon-fba-fees-2026/): Complete breakdown of every fee Amazon charges.
+- [Is Amazon FBA Still Worth It in 2026?](https://fbatools.zh.kg/blog/amazon-fba-still-worth-it-2026/): Complete cost analysis with real profit examples.
+- [Amazon FBA Storage Fees 2026](https://fbatools.zh.kg/blog/amazon-fba-storage-fees-2026/): Monthly rates, aged inventory surcharges, and minimization strategies.
+- [Amazon FBA Inbound Placement Fees 2026](https://fbatools.zh.kg/blog/amazon-fba-inbound-placement-fees-2026/): Rates, split options, and cost reduction strategies.
+- [Amazon FBA Profit Calculator Guide](https://fbatools.zh.kg/blog/amazon-fba-profit-calculator-guide-2026/): Step-by-step guide to calculating real FBA profit.
+- [Low-Inventory Fee Guide](https://fbatools.zh.kg/blog/low-inventory-fee-guide/): How the low-inventory fee eats margins and what to do about it.
+- [FBA vs FBM Comparison Guide](https://fbatools.zh.kg/blog/fba-vs-fbm-comparison/): Which fulfillment model pays you more.
